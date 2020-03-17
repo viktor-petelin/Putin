@@ -875,6 +875,26 @@ margin-top: 30px;
     cursor: pointer;
 }
 
+.turn1{
+    position: absolute;
+    background-color: gray;
+    color: white;
+    width: 150px;
+    height: 70px;
+    bottom:0;
+    right:0;
+    margin-right:40px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    justify-content: center;
+    border: black solid 4px;
+    user-select: none;
+}
+
+
 .karta{
     background: url("img/карта15.png") no-repeat center;
     position: absolute;
