@@ -1369,8 +1369,8 @@ function LawClick(){
 }
 
 function MeetingClick() {
-    addToDissatisfaction(-50);
-    addToHealth(-5);
+    addToDissatisfaction(-10);
+    addToHealth(-50);
     addToAction(-1);
     cancelAction.style.display = "flex";
     if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
