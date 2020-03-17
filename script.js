@@ -312,7 +312,7 @@ function medvedevButtonPrisonYesClick(){
     medvedevfoto.style.display = "flex";
     buttongoprison1.style.display ="none";
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -385,7 +385,7 @@ function serdukovButtonPrisonYesClick(){
     addToMilitary(-1);
     addToInfluence(-1);
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -412,7 +412,7 @@ function glefButtonPrisonYesClick(){
     gleffoto.style.display = "flex";
     buttongoprison3.style.display ="none";
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -440,7 +440,7 @@ function mantyrovButtonPrisonYesClick(){
     mantyrovfoto.style.display = "flex";
     buttongoprison4.style.display ="none";
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -468,7 +468,7 @@ function kolokolcevButtonPrisonYesClick(){
     kolokolcevfoto.style.display = "flex";
     buttongoprison5.style.display ="none";
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -658,7 +658,7 @@ function turnOverClick() {
         if(space.style.display === "flex") {
         addToSpaceTurn(-1);}
     }
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -694,7 +694,7 @@ serdukovfoto.style.display ="flex";
          padvisers3.style.display = "flex";
      }
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -718,7 +718,7 @@ function eventOneTwo(){
         padvisers4.style.display = "flex";
     }
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -743,7 +743,7 @@ function eventOneThree(){
         padvisers5.style.display = "flex";
     }
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -765,7 +765,7 @@ function eventTwoOne(){
     addToInfluence(5);
     addToDissatisfaction(10);
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -780,7 +780,7 @@ function eventTwoTwo(){
 
     addToMilitary(-5);
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -799,7 +799,7 @@ function eventTwoThree(){
     addToMilitary(-5);
     addToDissatisfaction(-5);
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -820,7 +820,7 @@ function eventThreeOne(){
 
     addToInfluence(-5);
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -836,7 +836,7 @@ function eventThreeTwo(){
     addToInfluence(5);
     addToDissatisfaction(5);
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -854,7 +854,7 @@ function eventThreeThree(){
     addToInfluence(10);
     addToDissatisfaction(5);
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -875,7 +875,7 @@ function eventFourOne(){
     addToDissatisfaction(10);
     addToMilitary(-5);
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -895,7 +895,7 @@ function eventFourTwo(){
 
     addToInfluence(-5);
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -912,7 +912,7 @@ function eventFiveOne(){
 
     addToInfluence(+5);
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -932,7 +932,7 @@ function eventFiveTwo(){
 
     addToInfluence(-5);
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -950,7 +950,7 @@ function eventSixOne(){
     addToInfluence(5);
     addToDissatisfaction(5);
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -970,7 +970,7 @@ function eventSixTwo(){
 
     addToInfluence(-5);
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -989,7 +989,7 @@ function eventSevenOne(){
     addToInfluence(5);
     addToDissatisfaction(5);
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -1007,7 +1007,7 @@ function eventSevenTwo(){
 
     addToInfluence(-5);
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -1029,7 +1029,7 @@ function eventSevenThree(){
     addToInfluence(-5);
     addToDissatisfaction(5);
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -1061,7 +1061,7 @@ function eventEightOne(){
     addToMoney(-300);
     addToInfluence(5);
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -1081,7 +1081,7 @@ function eventEightTwo(){
     addToMoney(-300);
     addToInfluence(5);
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -1101,7 +1101,7 @@ function eventEightThree(){
     addToMoney(-300);
     addToInfluence(5);
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -1116,7 +1116,7 @@ function eventEightFour(){
     allFonEvents.style.display ="none";
     turn.style.display ="flex";
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -1136,7 +1136,7 @@ function eventNineOne(){
     addToCorruption(-5);
     addIncomeBlack();
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -1156,7 +1156,7 @@ function eventNineTwo(){
 
     addToInfluence(-5);
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -1265,7 +1265,7 @@ function TakeBebtClick(){
     addToAction(-1);
     cancelAction.style.display = "flex";
 
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -1282,7 +1282,7 @@ function RaiseTaxClick(){
     addToAction(-1);
     cancelAction.style.display = "flex";
     addIncomeBlack();
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -1294,7 +1294,7 @@ function LetStealClick(){
     addToAction(-1);
     cancelAction.style.display = "flex";
     addIncomeBlack();
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -1305,7 +1305,7 @@ function ShowStrengthClick() {
     addToMilitary(-10);
     addToAction(-1);
     cancelAction.style.display = "flex";
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -1316,8 +1316,8 @@ function IncreasedPropagandaClick(){
     addToMilitary(5);
     addToAction(-1);
     cancelAction.style.display = "flex";
-    console.log('mo:', money < 1, 'di:', dissatisfaction > 99, 'inf:', influence < 1, 'mi:', military < 0);
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -1327,7 +1327,7 @@ function RelaxInCountryClick(){
     addToHealth(10);
     addToAction(-1);
     cancelAction.style.display = "flex";
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -1340,7 +1340,7 @@ function ToLandClick(){
     addToAction(-1);
     cancelAction.style.display = "flex";
     addIncomeBlack();
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -1351,7 +1351,7 @@ function RepressionClick(){
     addToMilitary(-5);
     addToAction(-1);
     cancelAction.style.display = "flex";
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
@@ -1362,18 +1362,18 @@ function LawClick(){
     addToInfluence(-5);
     addToAction(-1);
     cancelAction.style.display = "flex";
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
 }
 
 function MeetingClick() {
-    addToDissatisfaction(-10);
+    addToDissatisfaction(-50);
     addToHealth(-5);
     addToAction(-1);
     cancelAction.style.display = "flex";
-    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0)){
+    if((money < 1) || (dissatisfaction > 99) || (influence < 1) || (military < 0) || (health < 0)){
         playfield.style.display = "none";
         gameOverCont.style.display = "flex";
     }
