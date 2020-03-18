@@ -17,7 +17,6 @@ function hardClick() {
     easy.style.color = "#411c5c";
     hard1.style.color = "#2b0dd4";
     easy1.style.color = "#411c5c";
-
 }
 
 const mainpage1 = document.getElementById("mainpage-java");
@@ -53,11 +52,17 @@ function hard1Click() {
 
 const playfield = document.getElementById("play-field-java");
 function newgClick(){
+    if(hard.style.color === "#2b0dd4"){
+        addToMoney(-100);
+    }
     playfield.style.display = "flex";
     mainpage1.style.display = "none";
 }
 
 function newruClick(){
+    if(hard1.style.color === "#2b0dd4"){
+        addToMoney(-100);
+    }
     playfield.style.display = "flex";
     mainpage2.style.display = "none";
 }
