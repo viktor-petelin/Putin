@@ -1182,7 +1182,7 @@ function continueEventClick(){
 }
 
 const moneyElem = document.getElementById("money");
-let money = 700;
+let money = 850;
 function addToMoney(a){
     money = money + a;
     moneyElem.innerText = money;
