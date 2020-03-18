@@ -1441,6 +1441,7 @@ function drinkPoisonClick() {
     gameOverMoney.style.display = "none";
     gameOverStatys.style.display = "none";
     death.style.display = "flex";
+    gameDeath.style.display = "none";
 }
 
 function drinkPoisonTwoClick(){
@@ -1448,6 +1449,7 @@ function drinkPoisonTwoClick(){
     gameOverDissatisfaction.style.display = "none";
     gameOverMoney.style.display = "none";
     gameOverStatys.style.display = "none";
+    gameDeath.style.display = "none";
 }
 
 const gameDeathFinish = document.getElementById("game-death-finish");
