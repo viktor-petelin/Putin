@@ -1,899 +1,956 @@
 <!DOCTYPE HTML>
+<!--
+    Comments:
+    - code is not formatted
+    - newgClick() - better is newGameClick()
+    - cancelhintClick() - better is cancelHintClick()
+    - no embedded elements in <span> tag
+    - no more than one tag in one row
+    - no more than 1 empty row
+    - linter helps to format code while you are coding
+-->
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>Tryten'</title>
-    <link href="style.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>Tryten'</title>
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
 
 <div class="mainpage" id="mainpage-java">
-    <div class="languages">
-        <div class="ru" onclick="ruClick()">Rus</div>
-        <div class="eng">Eng</div>
-    </div>
-    <div class="menu-eng">
+  <div class="languages">
+    <div class="ru" onclick="ruClick()">Rus</div>
+    <div class="eng">Eng</div>
+  </div>
+  <div class="menu-eng">
 
-        <div class="intomenu">
-            <div class="new-game" onclick="newgClick()">
-                New game
-            </div>
-            <div class="difficulty-level">
-                <h1 class="difficulty-level-text">Difficulty level:
-                    <div class="levels">
-                        <div class="easy" id="easy-1" onclick="easyClick()">Easy</div>
-                        <div class="hard" id="hard-1" onclick="hardClick()">Hard</div>
-                    </div>
-                </h1>
-                <p class="click">Click to change</p>
-            </div>
+    <div class="intomenu">
+      <div class="new-game" onclick="newgClick()">
+        New game
+      </div>
+      <div class="difficulty-level">
+        <h1 class="difficulty-level-text">Difficulty level:
+          <div class="levels">
+            <div class="easy" id="easy-1" onclick="easyClick()">Easy</div>
+            <div class="hard" id="hard-1" onclick="hardClick()">Hard</div>
+          </div>
+        </h1>
+        <p class="click">Click to change</p>
+      </div>
 
-        </div>
     </div>
+  </div>
 </div>
 
-
 <div class="mainpage-ru" id="mainpage-ru-java">
-    <div class="languages">
-        <div class="ru">Рус</div>
-        <div class="eng" onclick="engClick()">Анг</div>
-    </div>
-    <div class="menu-eng">
+  <div class="languages">
+    <div class="ru">Рус</div>
+    <div class="eng" onclick="engClick()">Анг</div>
+  </div>
+  <div class="menu-eng">
 
-        <div class="intomenu">
-            <div class="new-game" onclick="newruClick()">
-                Новая игра
-            </div>
-            <div class="difficulty-level">
-                <h1 class="difficulty-level-text">Уровень сложности:
-                    <div class="levels">
-                        <div class="easy1" id="easy-2" onclick="easy1Click()">Шутя</div>
-                        <div class="hard" id="hard-2" onclick="hard1Click()">Реал</div>
-                    </div>
-                </h1>
-                <p class="click">Нажать чтобы сменить</p>
-            </div>
+    <div class="intomenu">
+      <div class="new-game" onclick="newruClick()">
+        Новая игра
+      </div>
+      <div class="difficulty-level">
+        <h1 class="difficulty-level-text">Уровень сложности:
+          <div class="levels">
+            <div class="easy1" id="easy-2" onclick="easy1Click()">Шутя</div>
+            <div class="hard" id="hard-2" onclick="hard1Click()">Реал</div>
+          </div>
+        </h1>
+        <p class="click">Нажать чтобы сменить</p>
+      </div>
 
-        </div>
     </div>
+  </div>
 </div>
 
 
 <div class="play-field" id="play-field-java">
-    <div class="icons">
+  <div class="icons">
 
-        <div class="block1">
-            <span class="money" onclick="moneyClick()"><i class="fas fa-coins"></i>
-                <span id="money">850</span>
-               <i class="fas fa-exclamation-circle sign-info"></i></span>
-            <span class="income" onclick="incomeClick()"><i class="fas fa-hand-holding-usd"></i>
-                <span id="income">-100</span>
-<i class="fas fa-exclamation-circle sign-info "></i></span>
-                <span class="income-black" onclick="incomeblackClick()"><i class="fas fa-hand-holding-usd"></i>
-                <span id="income-black">-130</span>
-</span>
-        </div>
-
-        <div class="block2">
-            <span class="influence" onclick="influenceClick()"><i class="fas fa-star"></i>
-                <span id="influence">5</span>
-<i class="fas fa-exclamation-circle sign-info" ></i>
-            </span>
-            <span class="military-strength" onclick="militaryStrengthClick()"><i class="fas fa-bomb"></i>
-                <span id="military">10</span>
-<i class="fas fa-exclamation-circle sign-info"></i>
-            </span>
-        </div>
-
-        <div class="block3">
-            <span class="health" onclick="healthClick()"><i class="fas fa-heart"></i>
-                <span id="health">80</span>%
-<i class="fas fa-exclamation-circle sign-info"></i>
-            </span>
-
-            <span class="corruption" onclick="corruptionClick()"><i class="fas fa-mask"></i>
-                <span id="corruption">30</span>%
-<i class="fas fa-exclamation-circle sign-info"></i>
-            </span>
-
-            <span class="dissatisfaction" onclick="dissatisfactionClick()"><i class="fas fa-frown"></i>
-                <span id="dissatisfaction">69</span>%
-<i class="fas fa-exclamation-circle sign-info"></i>
-            </span>
-        </div>
-
+    <div class="block1">
+      <!-- no embedded elements in <span> tag -->
+      <div class="money" onclick="moneyClick()">
+        <i class="fas fa-coins"></i>
+        <span id="money">850</span>
+        <i class="fas fa-exclamation-circle sign-info"></i>
+      </div>
+      <!-- no embedded elements in <span> tag -->
+      <div class="income" onclick="incomeClick()">
+        <i class="fas fa-hand-holding-usd"></i>
+        <span id="income">-100</span>
+        <i class="fas fa-exclamation-circle sign-info "></i>
+      </div>
+      <!-- no embedded elements in <span> tag -->
+      <div class="income-black" onclick="incomeblackClick()">
+        <i class="fas fa-hand-holding-usd"></i>
+        <span id="income-black">-130</span>
+      </div>
     </div>
 
-        <div class="menu-hint"  id="hint-java">
-            <div class="menu-hint-list">
-                <div class="money-hint" id="money-info">
-                <h1 class="title-hint">Бюджет</h1>
-                <p class="text-hint"></p>
-            </div>
-
-                <div class="income-hint" id="income-info">
-                    <h1 class="title-hint">Затраты</h1>
-                    <p class="text-hint"></p>
-                </div>
-
-                <div class="influence-hint" id="influence-info">
-                    <h1 class="title-hint">Власть</h1>
-                    <p class="text-hint"></p>
-                </div>
-
-                <div class="military-strength-hint" id="military-strength-info">
-                    <h1 class="title-hint">Силовые ресурсы</h1>
-                    <p class="text-hint"></p>
-                </div>
-
-
-                <div class="health-hint" id="health-info">
-                    <h1 class="title-hint">Здоровье</h1>
-                    <p class="text-hint"></p>
-                </div>
-
-
-                <div class="corruption-hint" id="corruption-info">
-                    <h1 class="title-hint">Коррупуция</h1>
-                    <p class="text-hint"></p>
-                </div>
-
-                <div class="dissatisfaction-hint" id="dissatisfaction-info">
-                    <h1 class="title-hint">Недовольство населения</h1>
-                    <p class="text-hint"></p>
-                </div>
-
-            </div>
-        </div>
-
-    <div class="cancel-hint" id="cancel-hint" onclick="cancelhintClick()">
-        <i class="fas fa-times-circle sign-cancel-hint"></i>
+    <div class="block2">
+      <div class="influence" onclick="influenceClick()"><i class="fas fa-star"></i>
+        <span id="influence">5</span>
+        <i class="fas fa-exclamation-circle sign-info"></i>
+      </div>
+      <div class="military-strength" onclick="militaryStrengthClick()"><i class="fas fa-bomb"></i>
+        <span id="military">10</span>
+        <i class="fas fa-exclamation-circle sign-info"></i>
+      </div>
     </div>
 
-    <div class="karta" id="karta-java">
+    <div class="block3">
+      <div class="health" onclick="healthClick()"><i class="fas fa-heart"></i>
+        <span id="health">80</span>%
+        <i class="fas fa-exclamation-circle sign-info"></i>
+      </div>
+
+      <div class="corruption" onclick="corruptionClick()"><i class="fas fa-mask"></i>
+        <span id="corruption">30</span>%
+        <i class="fas fa-exclamation-circle sign-info"></i>
+      </div>
+
+      <div class="dissatisfaction" onclick="dissatisfactionClick()"><i class="fas fa-frown"></i>
+        <span id="dissatisfaction">69</span>%
+        <i class="fas fa-exclamation-circle sign-info"></i>
+      </div>
     </div>
 
-    <div class="space-karta-icons" id="space-karta"><i class="fas fa-rocket"></i></div>
-    <div class="berkyt-karta-icons" id="berkyt-karta"><i class="fas fa-industry"></i></div>
-    <div class="IL-76md-90A-karta-icons" id="IL-76md-90A-karta"><i class="fas fa-fighter-jet"></i></div>
+  </div>
 
-    <div class="backevent" id="all-fon-events">
-        <div class="events-up" id="events-up-1">
-            <p class="year">2012</p>
-            <span class="spring" id="fa-dove"><i class="fas fa-dove"></i></span>
-            <span class="summer" id="fa-sun"><i class="fas fa-sun"></i></span>
-            <span class="autumn" id="fa-cloud-sun-rain"><i class="fas fa-cloud-sun-rain"></i></span>
-            !Событие!
-            <span class="spring" id="fa-seedling"><i class="fas fa-seedling "></i></span>
-            <span class="summer" id="fa-umbrella-beach"><i class="fas fa-umbrella-beach "></i></span>
-            <span class="autumn" id="fa-canadian-maple-leaf"><i class="fab fa-canadian-maple-leaf"></i></span>
-            <p class="year">2012</p>
-        </div>
+  <div class="menu-hint" id="hint-java">
+    <div class="menu-hint-list">
+      <div class="money-hint" id="money-info">
+        <h1 class="title-hint">Бюджет</h1>
+        <p class="text-hint"></p>
+      </div>
 
+      <div class="income-hint" id="income-info">
+        <h1 class="title-hint">Затраты</h1>
+        <p class="text-hint"></p>
+      </div>
 
-        <div class="backeventtext" id="backeventtext-java">
-            <div class="event-start" id="event1-java">
-                <h1 class="head-text-event"><!--Appoint ministers.-->Назначить советников!</h1>
-                <p class="desribe-event"><!--You are in power again! Strong power requires loyal advisers.-->
-                Вы снова у власти. Вам потребуются верные министры.</p>
-                <div class="choises">
-                    <p class="choise" onclick="eventOneOne()">1. <!--Let<span class="highlight-text"> friends</span> take their places.-->
-                        Позволить друзьям занять места.
-                    </p>
-                    <p class="choise"  onclick="eventOneTwo()">2. <!--<span class="highlight-text"> The professionals</span> checked by SecretService
+      <div class="influence-hint" id="influence-info">
+        <h1 class="title-hint">Власть</h1>
+        <p class="text-hint"></p>
+      </div>
+
+      <div class="military-strength-hint" id="military-strength-info">
+        <h1 class="title-hint">Силовые ресурсы</h1>
+        <p class="text-hint"></p>
+      </div>
+
+      <div class="health-hint" id="health-info">
+        <h1 class="title-hint">Здоровье</h1>
+        <p class="text-hint"></p>
+      </div>
+
+      <div class="corruption-hint" id="corruption-info">
+        <h1 class="title-hint">Коррупуция</h1>
+        <p class="text-hint"></p>
+      </div>
+
+      <div class="dissatisfaction-hint" id="dissatisfaction-info">
+        <h1 class="title-hint">Недовольство населения</h1>
+        <p class="text-hint"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cancel-hint" id="cancel-hint" onclick="cancelhintClick()">
+    <i class="fas fa-times-circle sign-cancel-hint"></i>
+  </div>
+
+  <div class="karta" id="karta-java">
+  </div>
+
+  <div class="space-karta-icons" id="space-karta">
+    <i class="fas fa-rocket"></i>
+  </div>
+  <div class="berkyt-karta-icons" id="berkyt-karta">
+    <i class="fas fa-industry"></i>
+  </div>
+  <div class="IL-76md-90A-karta-icons" id="IL-76md-90A-karta">
+    <i class="fas fa-fighter-jet"></i>
+  </div>
+
+  <div class="backevent" id="all-fon-events">
+    <div class="events-up" id="events-up-1">
+      <p class="year">2012</p>
+      <span class="spring" id="fa-dove"><i class="fas fa-dove"></i></span>
+      <span class="summer" id="fa-sun"><i class="fas fa-sun"></i></span>
+      <span class="autumn" id="fa-cloud-sun-rain"><i class="fas fa-cloud-sun-rain"></i></span>
+      !Событие!
+      <span class="spring" id="fa-seedling"><i class="fas fa-seedling "></i></span>
+      <span class="summer" id="fa-umbrella-beach"><i class="fas fa-umbrella-beach "></i></span>
+      <span class="autumn" id="fa-canadian-maple-leaf"><i class="fab fa-canadian-maple-leaf"></i></span>
+      <p class="year">2012</p>
+    </div>
+
+    <div class="backeventtext" id="backeventtext-java">
+      <div class="event-start" id="event1-java">
+        <h1 class="head-text-event"><!--Appoint ministers.-->Назначить советников!</h1>
+        <p class="desribe-event"><!--You are in power again! Strong power requires loyal advisers.-->
+          Вы снова у власти. Вам потребуются верные министры.
+        </p>
+        <div class="choises">
+          <p class="choise" onclick="eventOneOne()">
+            1. <!--Let<span class="highlight-text"> friends</span> take their places.-->
+            Позволить друзьям занять места.
+          </p>
+          <p class="choise" onclick="eventOneTwo()">
+            2. <!--<span class="highlight-text"> The professionals</span> checked by SecretService
                         will approach most of all.-->
-                    Назначить проверенных профессионалов.</p>
-                    <p class="choise"  onclick="eventOneThree()">3. <!-- Power must increase! Appoint<span
-                            class="highlight-text"> SecretService's agents</span><i class="fas fa-exclamation-circle sign-info" ></i> as.-->
-                    "Государству не хватает крепкой руки". Назначить силовиков.</p>
-                </div>
-            </div>
+            Назначить проверенных профессионалов.</p>
+          <p class="choise" onclick="eventOneThree()">
+            3. <!-- Power must increase! Appoint<span class="highlight-text"> SecretService's agents</span><i class="fas fa-exclamation-circle sign-info" ></i> as.-->
+            "Государству не хватает крепкой руки". Назначить силовиков.</p>
+        </div>
+      </div>
 
-            <div class="event" id="event2-java">
-                <h1 class="head-text-event"><!--Сop mayhem.-->Полицейский беспредел.
-                    <span class="dissatisfaction-plus">[+10% <i class="fas fa-angry dissatisfaction"></i>]</span></h1>
-                <p class="desribe-event"><!--Police officers tortured S. Shampanov to death, using a bottle of champagne.
+      <div class="event" id="event2-java">
+        <h1 class="head-text-event"><!--Сop mayhem.-->Полицейский беспредел.
+          <span class="dissatisfaction-plus">[+10% <i class="fas fa-angry dissatisfaction"></i>]</span>
+        </h1>
+        <p class="desribe-event"><!--Police officers tortured S. Shampanov to death, using a bottle of champagne.
                     The society is undersized, complains about the structure of the police system.-->
-                Сотрудники полиции запытали С.Шампонова до смерти, используя для бутылку от шампанского.
-                Общественность недовольна, люди жалуются на структуру полицейской системы.</p>
-                <div class="choises">
-                    <p class="choise2" onclick="eventTwoOne()">1. <!--The chapters are not to blame for the crimes of their subordinates.
+          Сотрудники полиции запытали С.Шампонова до смерти, используя для бутылку от шампанского.
+          Общественность недовольна, люди жалуются на структуру полицейской системы.</p>
+        <div class="choises">
+          <p class="choise2" onclick="eventTwoOne()">1. <!--The chapters are not to blame for the crimes of their subordinates.
                         Cops to plant. The system has nothing to do with it!-->
-                        "Главы УМВД не виноваты в преступлениях своих подчиненных.
-                        Ментов посадить. Система не имеет к этому никакого отношения!"
-                    </p>
-                    <p class="choise2"  onclick="eventTwoTwo()">2.
-                        <!--Madness! Why the heads of the MIA of Kazan do not follow the situation in the region.
-                        Dismiss all involved.-->
-                        Безумие! Почему руководители УМВД Казани не следят за ситуацией в регионе.
-                        Уволить участников и глав региона за халатность.
-                    </p>
-                    <p class="choise2"  onclick="eventTwoThree()">3. <!--The Police Act 2011 failed.
+            "Главы УМВД не виноваты в преступлениях своих подчиненных.
+            Ментов посадить. Система не имеет к этому никакого отношения!"
+          </p>
+          <p class="choise2" onclick="eventTwoTwo()">2.
+            <!--Madness! Why the heads of the MIA of Kazan do not follow the situation in the region.
+            Dismiss all involved.-->
+            Безумие! Почему руководители УМВД Казани не следят за ситуацией в регионе.
+            Уволить участников и глав региона за халатность.
+          </p>
+          <p class="choise2" onclick="eventTwoThree()">3. <!--The Police Act 2011 failed.
                         In addition to punishing all involved, a new reform is necessary!-->
-                        Закон "О полиции" 2011 года не удался. В дополнение к наказанию всех участников, необходима новая реформа!
-                        <span class="money">-100<i class="fas fa-coins"></i></span>
-                    </p>
-                </div>
-            </div>
+            Закон "О полиции" 2011 года не удался. В дополнение к наказанию всех участников, необходима новая реформа!
+            <span class="money">-100<i class="fas fa-coins"></i></span>
+          </p>
+        </div>
+      </div>
 
-            <div class="event" id="event3-java">
-                <h1 class="head-text-event"><!--Party politics.--> Партийная политика.</h1>
-                <p class="desribe-event">
-                    <!--"Your Highness, the law on the simplified creation of the party,
-                    which we adopted after Bolotnaya, can begin to act after us ..."-->
-                    "Ваше Высочество, закон упрощении процедуры регистрации партий,
-                    который мы приняли после Болотной, может начать действовать против нас ..."</p>
-                <div class="choises">
-                    <p class="choise" onclick="eventThreeOne()">
-                        1. <!--The law is the law!
+      <div class="event" id="event3-java">
+        <h1 class="head-text-event"><!--Party politics.--> Партийная политика.</h1>
+        <p class="desribe-event">
+          <!--"Your Highness, the law on the simplified creation of the party,
+          which we adopted after Bolotnaya, can begin to act after us ..."-->
+          "Ваше Высочество, закон упрощении процедуры регистрации партий,
+          который мы приняли после Болотной, может начать действовать против нас ..."</p>
+        <div class="choises">
+          <p class="choise" onclick="eventThreeOne()">
+            1. <!--The law is the law!
                         If people want to participate in the political life of the country,
                         we do not have the right to play with them.-->
-                        "Закон есть закон!
-                        Если люди хотят участвовать в политической жизни страны,
-                        мы не имеем права мешать ним."
-                    </p>
-                    <p class="choise"  onclick="eventThreeTwo()">
-                        2. <!--Ensure that only correct, obedient parties are created.-->
-                        "Убедитесь, что созданы только правильные, послушные партии."
-                    </p>
-                    <p class="choise"  onclick="eventThreeThree()">
-                        3. <!--In addition to controlling the opposition,
+            "Закон есть закон!
+            Если люди хотят участвовать в политической жизни страны,
+            мы не имеем права мешать ним."
+          </p>
+          <p class="choise" onclick="eventThreeTwo()">
+            2. <!--Ensure that only correct, obedient parties are created.-->
+            "Убедитесь, что созданы только правильные, послушные партии."
+          </p>
+          <p class="choise" onclick="eventThreeThree()">
+            3. <!--In addition to controlling the opposition,
                         it is necessary to register new “correct” parties.-->
-                        "В дополнение к контролю оппозиции,
-                        необходимо зарегистрировать новые «правильные» партии."
-                    </p>
-                </div>
-            </div>
+            "В дополнение к контролю оппозиции,
+            необходимо зарегистрировать новые «правильные» партии."
+          </p>
+        </div>
+      </div>
 
-            <div class="event" id="event4-java">
-                <h1 class="head-text-event"><!--People’s March.-->Народный марш.
-                    <span class="health-minus">[-10<i class="fas fa-heart"></i>]</span></h1>
-                <p class="desribe-event">
-                    <!--The people are dissatisfied with your rule,
-                    thousands of people marched with the protest slogans
-                    "For honest power. For Russia without Putin!"-->
-                    Люди недовольны вашим правлением,
-                    тысячи людей прошли маршем с лозунгами протеста
-                    "За честную власть. За Россию без Путина!"</p>
-                <div class="choises">
-                    <p class="choise" onclick="eventFourOne()">
-                        1. <!--What ?! How dare they ?! Do not let them go to Bolotnaya Street again,
+      <div class="event" id="event4-java">
+        <h1 class="head-text-event"><!--People’s March.-->Народный марш.
+          <span class="health-minus">[-10<i class="fas fa-heart"></i>]</span>
+        </h1>
+        <p class="desribe-event">
+          <!--The people are dissatisfied with your rule,
+          thousands of people marched with the protest slogans
+          "For honest power. For Russia without Putin!"-->
+          Люди недовольны вашим правлением,
+          тысячи людей прошли маршем с лозунгами протеста
+          "За честную власть. За Россию без Путина!"</p>
+        <div class="choises">
+          <p class="choise" onclick="eventFourOne()">
+            1. <!--What ?! How dare they ?! Do not let them go to Bolotnaya Street again,
                         localize the rally. The most active protesters should be detained.-->
-                        "Что?! Как они посмели?! Не позволяйте им снова пройти на Болотную улицу,
-                        локализуйте митинг. Самые активные протестующие должны быть задержаны."
-                    </p>
-                    <p class="choise"  onclick="eventFourTwo()">
-                        2. <!--Citizens have every right to hold peaceful demonstrations.
+            "Что?! Как они посмели?! Не позволяйте им снова пройти на Болотную улицу,
+            локализуйте митинг. Самые активные протестующие должны быть задержаны."
+          </p>
+          <p class="choise" onclick="eventFourTwo()">
+            2. <!--Citizens have every right to hold peaceful demonstrations.
                         I think we can solve this issue without resorting to violence.-->
-                        "Граждане имеют полное право проводить мирные демонстрации.
-                        Я думаю, что мы можем решить эту проблему, не прибегая к насилию."
-                    </p>
-                </div>
-            </div>
+            "Граждане имеют полное право проводить мирные демонстрации.
+            Я думаю, что мы можем решить эту проблему, не прибегая к насилию."
+          </p>
+        </div>
+      </div>
 
-            <div class="event" id="event5-java">
-                <h1 class="head-text-event"><!--Nuclear North Korea.-->Ядерная Северная Корея.</h1>
-                <p class="desribe-event">
-                    <!--North Korea declared itself a nuclear power.
-                    NATO countries impose sanctions on the DPRK.
-                    Will Russia react to the strengthening of North Korea.-->
-                    Северная Корея объявила себя ядерной державой.
-                    Страны НАТО вводят санкции против КНДР.
-                    Будет ли Россия реагировать на укрепление Северной Кореи?
-                </p>
-                <div class="choises">
-                    <p class="choise" onclick="eventFiveOne()">
-                        1. <!--"We do not need enmity with North Korea.
+      <div class="event" id="event5-java">
+        <h1 class="head-text-event"><!--Nuclear North Korea.-->Ядерная Северная Корея.</h1>
+        <p class="desribe-event">
+          <!--North Korea declared itself a nuclear power.
+          NATO countries impose sanctions on the DPRK.
+          Will Russia react to the strengthening of North Korea.-->
+          Северная Корея объявила себя ядерной державой.
+          Страны НАТО вводят санкции против КНДР.
+          Будет ли Россия реагировать на укрепление Северной Кореи?
+        </p>
+        <div class="choises">
+          <p class="choise" onclick="eventFiveOne()">
+            1. <!--"We do not need enmity with North Korea.
                         In the event of US aggression, the DPRK can become our ally."-->
-                        "Нам не нужна вражда с Северной Кореей.
-                        В случае агрессии США КНДР может стать нашим союзником."
-                    </p>
-                    <p class="choise"  onclick="eventFiveTwo()">
-                        2. <!--"Kim Jong-il is a dictator and a madman who knows how they will use nuclear weapons.
+            "Нам не нужна вражда с Северной Кореей.
+            В случае агрессии США КНДР может стать нашим союзником."
+          </p>
+          <p class="choise" onclick="eventFiveTwo()">
+            2. <!--"Kim Jong-il is a dictator and a madman who knows how they will use nuclear weapons.
                         I think we should support the sanctions policy against DPRK."-->
-                        "Ким Чен Ир - диктатор и безумец, кто знает, как они будут использовать ядерное оружие.
-                        Я думаю, что мы должны поддержать санкционную политию против КНДР."
-                    </p>
-                </div>
-            </div>
+            "Ким Чен Ир - диктатор и безумец, кто знает, как они будут использовать ядерное оружие.
+            Я думаю, что мы должны поддержать санкционную политию против КНДР."
+          </p>
+        </div>
+      </div>
 
-            <div class="event" id="event6-java">
-            <h1 class="head-text-event"><!--The law on rallies.-->Закон о митингах.</h1>
-            <p class="desribe-event">
-                <!--After the People’s March,
-                caring deputies drafted a bill requiring the people to pay a large fine for violating the rules of the rally.-->
-                После Народного Марша заботливые депутаты составили законопроект,
-                накладывающий на людей уплату крупного штрафа за нарушение правил проведения митинга.</p>
-            <div class="choises">
-                <p class="choise" onclick="eventSixOne()">
-                    1. <!--"Wonderful law.
+      <div class="event" id="event6-java">
+        <h1 class="head-text-event"><!--The law on rallies.-->Закон о митингах.</h1>
+        <p class="desribe-event">
+          <!--After the People’s March,
+          caring deputies drafted a bill requiring the people to pay a large fine for violating the rules of the rally.-->
+          После Народного Марша заботливые депутаты составили законопроект,
+          накладывающий на людей уплату крупного штрафа за нарушение правил проведения митинга.</p>
+        <div class="choises">
+          <p class="choise" onclick="eventSixOne()">
+            1. <!--"Wonderful law.
                     This will make people think twice before expressing extreme expressions of their discontent."-->
-                    "Чудесный закон. Это заставит людей дважды подумать,
-                    прежде чем выразить экстремально свое недовольства".
-                </p>
-                <p class="choise"  onclick="eventSixTwo()">
-                    2. <!--"Not! This will cause even more excitement and new rallies!"-->
-                    Нет! Это вызовет еще больше волнений и новые митинги!
-                </p>
-            </div>
+            "Чудесный закон. Это заставит людей дважды подумать,
+            прежде чем выразить экстремально свое недовольства".
+          </p>
+          <p class="choise" onclick="eventSixTwo()">
+            2. <!--"Not! This will cause even more excitement and new rallies!"-->
+            Нет! Это вызовет еще больше волнений и новые митинги!
+          </p>
         </div>
+      </div>
 
-            <div class="event" id="event7-java">
-                <h1 class="head-text-event"><!--Nature is raging!-->Природа бушует!
-                    <span class="dissatisfaction-plus">[+10 <i class="fas fa-angry dissatisfaction"></i>]</span></h1>
-                <p class="desribe-event">
-                    <!--In Gelendzhik, Novorossiysk and Gelendzhik,
-                    the flood that led to more than 34 thousand victims.
-                    The authorities were inactive after the warning of the weather service.
-                    The people demand justice.-->
-                    В Геленджике, Новороссийске и Крымске произошло
-                    наводнение привело к более чем 34 тысячам жертв.
-                    Власти региона бездействовали после предупреждения метеослужбы.
-                    Народ требует справедливости.
-                </p>
-                <div class="choises">
-                    <p class="choise7" onclick="eventSevenOne()">
-                        1. <!--"The tragedy is terrible, but the local authorities received a warning too late.
+      <div class="event" id="event7-java">
+        <h1 class="head-text-event"><!--Nature is raging!-->Природа бушует!
+          <span class="dissatisfaction-plus">[+10 <i class="fas fa-angry dissatisfaction"></i>]</span></h1>
+        <p class="desribe-event">
+          <!--In Gelendzhik, Novorossiysk and Gelendzhik,
+          the flood that led to more than 34 thousand victims.
+          The authorities were inactive after the warning of the weather service.
+          The people demand justice.-->
+          В Геленджике, Новороссийске и Крымске произошло
+          наводнение привело к более чем 34 тысячам жертв.
+          Власти региона бездействовали после предупреждения метеослужбы.
+          Народ требует справедливости.
+        </p>
+        <div class="choises">
+          <p class="choise7" onclick="eventSevenOne()">
+            1. <!--"The tragedy is terrible, but the local authorities received a warning too late.
                         Citizens will be able to change managers in the next election."-->
-                        Трагедия ужасная, но местные власти получили предупреждение слишком поздно.
-                        Граждане смогут сменить управление на следующих выборах.
-                    </p>
-                    <p class="choise7"  onclick="eventSevenTwo()">
-                        2. <!--"Perpetrators should be punished for negligence.
+            Трагедия ужасная, но местные власти получили предупреждение слишком поздно.
+            Граждане смогут сменить управление на следующих выборах.
+          </p>
+          <p class="choise7" onclick="eventSevenTwo()">
+            2. <!--"Perpetrators should be punished for negligence.
                         Take all necessary measures to eliminate the cataclysm."-->
-                        "Виновные должны быть наказаны за халатность.
-                        Принять все необходимые меры для устранения катаклизма."
-                    </p>
-                    <p class="choise7"  onclick="eventSevenThree()">
-                        3. <!--Besides fair punishment,
+            "Виновные должны быть наказаны за халатность.
+            Принять все необходимые меры для устранения катаклизма."
+          </p>
+          <p class="choise7" onclick="eventSevenThree()">
+            3. <!--Besides fair punishment,
                         it is necessary to take measures to finance the region to counter flooding.-->
-                        "Помимо справедливого наказания, необходимо принять меры по финансированию региона по противодействию наводнениям."
-                        <span class="money">-200<i class="fas fa-coins"></i></span>
-                    </p>
-                </div>
-            </div>
+            "Помимо справедливого наказания, необходимо принять меры по финансированию региона по противодействию
+            наводнениям."
+            <span class="money">-200<i class="fas fa-coins"></i></span>
+          </p>
+        </div>
+      </div>
 
-            <div class="event" id="event8-java">
-                <h1 class="head-text-event"><!--World Trade Оrganisation.-->Всемирная торговая организация.</h1>
-                <p class="desribe-event">
-                    <!--Today, Russia becomes a member of the WTO after 18 years of negotiations.
-                    I had to make economic concessions, but this promises economic growth in the future.-->
-                    Сегодня Россия становится членом ВТО после 18 лет переговоров.
-                    Нам пришлось пойти на экономические уступки, но это сулит экономический рост в будущем.
-                </p>
-                <div class="choises">
-                    <p class="choise8" onclick="eventEightOne()">
-                        1. <!--"Excellent! It is also worth taking care of strengthening the domestic economy.
-                        Must be invested in mining."-->Отлично! Также стоит позаботиться об укреплении отечественной экономики.
-                        Необходимо инвестировать в добычу полезных ископаемых. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                        <span class="money">-300<i class="fas fa-coins"></i></span>
-                    </p>
-                    <p class="choise8"  onclick="eventEightTwo()">
-                        2. <!--" Super! But we should not forget about protecting our economy.
+      <div class="event" id="event8-java">
+        <h1 class="head-text-event"><!--World Trade Оrganisation.-->Всемирная торговая организация.</h1>
+        <p class="desribe-event">
+          <!--Today, Russia becomes a member of the WTO after 18 years of negotiations.
+          I had to make economic concessions, but this promises economic growth in the future.-->
+          Сегодня Россия становится членом ВТО после 18 лет переговоров.
+          Нам пришлось пойти на экономические уступки, но это сулит экономический рост в будущем.
+        </p>
+        <div class="choises">
+          <p class="choise8" onclick="eventEightOne()">
+            1. <!--"Excellent! It is also worth taking care of strengthening the domestic economy.
+                        Must be invested in mining."-->Отлично! Также стоит позаботиться об укреплении отечественной
+            экономики.
+            Необходимо инвестировать в добычу полезных ископаемых. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <span class="money">-300<i class="fas fa-coins"></i></span>
+          </p>
+          <p class="choise8" onclick="eventEightTwo()">
+            2. <!--" Super! But we should not forget about protecting our economy.
                         It is necessary to invest in a military complex."-->
-                        Супер! Но мы не должны забывать о защите нашей экономики.
-                        Надо вкладывать деньги в военно-промышленный комплекс.
-                        <span class="money">-300<i class="fas fa-coins"></i></span>
-                    </p>
-                    <p class="choise8"  onclick="eventEightThree()">
-                        3. <!--"Wonderful! It is also worth taking care of strengthening the status and technological progress.
+            Супер! Но мы не должны забывать о защите нашей экономики.
+            Надо вкладывать деньги в военно-промышленный комплекс.
+            <span class="money">-300<i class="fas fa-coins"></i></span>
+          </p>
+          <p class="choise8" onclick="eventEightThree()">
+            3. <!--"Wonderful! It is also worth taking care of strengthening the status and technological progress.
                         It is necessary to invest in space construction."-->
-                        Замечательный! Также стоит позаботиться о техническом прогрессе и усилении статуса на мировой арене.
-                        Необходимо инвестировать в космическое строительство.
-                        <span class="money">-300<i class="fas fa-coins"></i></span>
-                    </p>
-                    <p class="choise8"  onclick="eventEightFour()">
-                        4. <!--"Good"-->Хорошо!</p>
-                </div>
-            </div>
+            Замечательный! Также стоит позаботиться о техническом прогрессе и усилении статуса на мировой арене.
+            Необходимо инвестировать в космическое строительство.
+            <span class="money">-300<i class="fas fa-coins"></i></span>
+          </p>
+          <p class="choise8" onclick="eventEightFour()">
+            4. <!--"Good"-->Хорошо!</p>
+        </div>
+      </div>
 
-            <div class="event" id="event9-java">
-                <h1 class="head-text-event"><!--In anticipation of the summit.-->В предвкушении саммита.</h1>
-                <p class="desribe-event">
-                    <!--The APEC Summit will be held soon. There is a proposal to hold it on Russky Island.
-                    This summit should positively affect the Eastern partners.-->
-                    Саммит АТЭС состоится в ближайшее время. Есть предложение провести его на острове Русский.
-                    Этот саммит должен положительно повлиять на восточных партнеров.
-                </p>
-                <div class="choises">
-                    <p class="choise" onclick="eventNineOne()">
-                        1. <!--"Great idea. Build the necessary infrastructure in the shortest possible time."-->
-                        "Отличная идея. Постройте необходимую инфраструктуру на острове в кратчайшие сроки."
-                        <span class="money">-100<i class="fas fa-coins"></i></span>
-                    </p>
-                    <p class="choise"  onclick="eventNineTwo()">
-                        2. <!--"The island does not have the necessary infrastructure, hold a summit in Moscow.
+      <div class="event" id="event9-java">
+        <h1 class="head-text-event"><!--In anticipation of the summit.-->В предвкушении саммита.</h1>
+        <p class="desribe-event">
+          <!--The APEC Summit will be held soon. There is a proposal to hold it on Russky Island.
+          This summit should positively affect the Eastern partners.-->
+          Саммит АТЭС состоится в ближайшее время. Есть предложение провести его на острове Русский.
+          Этот саммит должен положительно повлиять на восточных партнеров.
+        </p>
+        <div class="choises">
+          <p class="choise" onclick="eventNineOne()">
+            1. <!--"Great idea. Build the necessary infrastructure in the shortest possible time."-->
+            "Отличная идея. Постройте необходимую инфраструктуру на острове в кратчайшие сроки."
+            <span class="money">-100<i class="fas fa-coins"></i></span>
+          </p>
+          <p class="choise" onclick="eventNineTwo()">
+            2. <!--"The island does not have the necessary infrastructure, hold a summit in Moscow.
                         We cannot spend so much money for a single summit."-->
-                        На острове нет необходимой инфраструктуры, проведем саммит в Москве.
-                        Мы не можем потратить столько денег на один саммит.
-                    </p>
-                </div>
-            </div>
-
+            На острове нет необходимой инфраструктуры, проведем саммит в Москве.
+            Мы не можем потратить столько денег на один саммит.
+          </p>
         </div>
+      </div>
 
-        <div class="events-down" id="events-down-1">
-            <p class="year">2012</p>
-            <span class="spring" id="fa-frog"><i class="fas fa-frog"></i></span>
-            <span class="summer" id="fa-swimmer"><i class="fas fa-swimmer"></i></span>
-            <span class="autumn" id="fa-graduation-cap"><i class="fas fa-graduation-cap"></i></span>
-            !Событие!
-            <span class="spring" id="fa-rainbow"><i class="fas fa-rainbow"></i></span>
-            <span class="summer" id="fa-swimming-pool"><i class="fas fa-swimming-pool"></i></span>
-            <span class="autumn" id="fa-umbrella"><i class="fas fa-umbrella"></i></span>
-            <p class="year">2012</p>
-        </div>
     </div>
 
-    <div class="answer-event1" id="answer-event1">
+    <div class="events-down" id="events-down-1">
+      <p class="year">2012</p>
+      <span class="spring" id="fa-frog"><i class="fas fa-frog"></i></span>
+      <span class="summer" id="fa-swimmer"><i class="fas fa-swimmer"></i></span>
+      <span class="autumn" id="fa-graduation-cap"><i class="fas fa-graduation-cap"></i></span>
+      !Событие!
+      <span class="spring" id="fa-rainbow"><i class="fas fa-rainbow"></i></span>
+      <span class="summer" id="fa-swimming-pool"><i class="fas fa-swimming-pool"></i></span>
+      <span class="autumn" id="fa-umbrella"><i class="fas fa-umbrella"></i></span>
+      <p class="year">2012</p>
+    </div>
+  </div>
 
-        <div class="text-answer-event" id="text-event-one-one"><!--Medvedev, Gref, Serdykov are the most suitable candidates.
+  <div class="answer-event1" id="answer-event1">
+    <div class="text-answer-event" id="text-event-one-one"><!--Medvedev, Gref, Serdykov are the most suitable candidates.
             They will make you a good service.-->
-            Медведев, Греф, Сердюков - самые подходящие кандидаты. Они составят вам хорошую службу.
-        </div>
-        <div class="text-answer-event" id="text-event-two-one"><!--Medvedev, Mantyrov, Serdykov are the most suitable candidates.
+      Медведев, Греф, Сердюков - самые подходящие кандидаты. Они составят вам хорошую службу.
+    </div>
+    <div class="text-answer-event" id="text-event-two-one"><!--Medvedev, Mantyrov, Serdykov are the most suitable candidates.
             They will make you a good service.-->
-            Медведев, Мантуров, Сердюков - самые подходящие кандидаты. Они составят вам хорошую службу.
-        </div>
-        <div class="text-answer-event" id="text-event-three-one"><!--Medvedev, Kolokoltsov, Serdykov are the most suitable candidates.
+      Медведев, Мантуров, Сердюков - самые подходящие кандидаты. Они составят вам хорошую службу.
+    </div>
+    <div class="text-answer-event" id="text-event-three-one"><!--Medvedev, Kolokoltsov, Serdykov are the most suitable candidates.
             They will make you a good service.-->
-            Медведев, Колокольцев, Сердюков - самые подходящие кандидаты. Они составят вам хорошую службу.
-        </div>
+      Медведев, Колокольцев, Сердюков - самые подходящие кандидаты. Они составят вам хорошую службу.
+    </div>
 
-        <div class="text-answer-event" id="text-event-one-two">
-            <!--Citizens are very indignant. But this will save our power reserve.-->
-            Граждане очень возмущены. Но это спасет наш силовой ресурс.
-            <span class="influence">+5<i class="fas fa-star nadot"></i></span>
-            <span class="dissatisfaction">+10%<i class="fas fa-grin nadot"></i></span>
-        </div>
-        <div class="text-answer-event2" id="text-event-two-two">
-            <!--Heads sent to prison.-->
-            Своих постов лишились 9 руководителей УМВД по Казани. Отдел был расформирован.
-            Сразу еще несколько человек пожаловались на пытки в казанской полиции.
-            Этот вопиющий случай наглядно показал, что спешно проведенная в 2011 году реформа МВД свелась к принятию Закона «О полиции»,
-            смене вывески, отдельным косметическим изменениям, сокращению части подразделений и численности сотрудников.
-            <span class="military-strength">-5<i class="fas fa-bomb nadot"></i></span>
-        </div>
-        <div class="text-answer-event2" id="text-event-three-two">
-            <!--A new police reform has been carried out, this should improve the situation.-->
-            Своих постов лишились 9 руководителей УМВД по Казани. Отдел был расформирован.
-            Сразу еще несколько человек пожаловались на пытки в казанской полиции.
-            Этот вопиющий случай наглядно показал, что спешно проведенная в 2011 году реформа МВД свелась к принятию Закона «О полиции»,
-            смене вывески, отдельным косметическим изменениям, сокращению части подразделений и численности сотрудников.
-            Началась разработка нового законопроекта.
-            <span class="money answer-icons">-100<i class="fas fa-coins"></i></span>
-            <span class="military-strength answer-icons">-5<i class="fas fa-bomb"></i></span>
-            <span class="dissatisfaction answer-icons">-5%<i class="fas fa-grin "></i></span>
-        </div>
+    <div class="text-answer-event" id="text-event-one-two">
+      <!--Citizens are very indignant. But this will save our power reserve.-->
+      Граждане очень возмущены. Но это спасет наш силовой ресурс.
+      <span class="influence">+5<i class="fas fa-star nadot"></i></span>
+      <span class="dissatisfaction">+10%<i class="fas fa-grin nadot"></i></span>
+    </div>
+    <div class="text-answer-event2" id="text-event-two-two">
+      <!--Heads sent to prison.-->
+      Своих постов лишились 9 руководителей УМВД по Казани. Отдел был расформирован.
+      Сразу еще несколько человек пожаловались на пытки в казанской полиции.
+      Этот вопиющий случай наглядно показал, что спешно проведенная в 2011 году реформа МВД свелась к принятию Закона «О
+      полиции»,
+      смене вывески, отдельным косметическим изменениям, сокращению части подразделений и численности сотрудников.
+      <span class="military-strength">-5<i class="fas fa-bomb nadot"></i></span>
+    </div>
+    <div class="text-answer-event2" id="text-event-three-two">
+      <!--A new police reform has been carried out, this should improve the situation.-->
+      Своих постов лишились 9 руководителей УМВД по Казани. Отдел был расформирован.
+      Сразу еще несколько человек пожаловались на пытки в казанской полиции.
+      Этот вопиющий случай наглядно показал, что спешно проведенная в 2011 году реформа МВД свелась к принятию Закона «О
+      полиции»,
+      смене вывески, отдельным косметическим изменениям, сокращению части подразделений и численности сотрудников.
+      Началась разработка нового законопроекта.
+      <span class="money answer-icons">-100<i class="fas fa-coins"></i></span>
+      <span class="military-strength answer-icons">-5<i class="fas fa-bomb"></i></span>
+      <span class="dissatisfaction answer-icons">-5%<i class="fas fa-grin "></i></span>
+    </div>
 
-        <div class="text-answer-event" id="text-event-one-three">
-            <!--The government does not understand your decisions.-->
-            В Правительстве не поняли ход ваших мыслей. За спиной начинают гулять разные слухи.
-            <span class="influence">-5<i class="fas fa-star nadot"></i></span>
-        </div>
-        <div class="text-answer-event" id="text-event-two-three">
-            <!--Good decision.-->
-            Хорошее решение.
-            <span class="influence">+5<i class="fas fa-star nadot"></i></span>
-            <span class="dissatisfaction">+5%<i class="fas fa-grin nadot"></i></span>
-        </div>
-        <div class="text-answer-event3" id="text-event-three-three"><!--This will require finances, but it will strengthen our power.
+    <div class="text-answer-event" id="text-event-one-three">
+      <!--The government does not understand your decisions.-->
+      В Правительстве не поняли ход ваших мыслей. За спиной начинают гулять разные слухи.
+      <span class="influence">-5<i class="fas fa-star nadot"></i></span>
+    </div>
+    <div class="text-answer-event" id="text-event-two-three">
+      <!--Good decision.-->
+      Хорошее решение.
+      <span class="influence">+5<i class="fas fa-star nadot"></i></span>
+      <span class="dissatisfaction">+5%<i class="fas fa-grin nadot"></i></span>
+    </div>
+    <div class="text-answer-event3" id="text-event-three-three"><!--This will require finances, but it will strengthen our power.
             Although the people are very unhappy.-->
-            Срок разрешенного неучастия партии в выборах продлили с 5 до 7 лет подряд.
-            В Минюст поступило более 80 заявок на регистрацию от партий разной направленности:
-            «Монархическая партия», «Самодержавная Россия», «Социалистическая партия России»,
-            «Трудовая партия России», «Новая экономическая партия»,  «Казачья партия».
-            Партия Навального и других опозиционеров зарегистрированы не были.
-            В составе их партий были найдены несовершеннолетнии и люди без прописки.
-            Единичные партии участвовали в следующих выборах.
-            <span class="money">-100<i class="fas fa-coins nadot"></i></span>
-            <span class="influence">+10<i class="fas fa-star nadot"></i></span>
-            <span class="dissatisfaction">-5%<i class="fas fa-grin nadot"></i></span>
-        </div>
+      Срок разрешенного неучастия партии в выборах продлили с 5 до 7 лет подряд.
+      В Минюст поступило более 80 заявок на регистрацию от партий разной направленности:
+      «Монархическая партия», «Самодержавная Россия», «Социалистическая партия России»,
+      «Трудовая партия России», «Новая экономическая партия», «Казачья партия».
+      Партия Навального и других опозиционеров зарегистрированы не были.
+      В составе их партий были найдены несовершеннолетнии и люди без прописки.
+      Единичные партии участвовали в следующих выборах.
+      <span class="money">-100<i class="fas fa-coins nadot"></i></span>
+      <span class="influence">+10<i class="fas fa-star nadot"></i></span>
+      <span class="dissatisfaction">-5%<i class="fas fa-grin nadot"></i></span>
+    </div>
 
-        <div class="text-answer-event4" id="text-event-one-four">
-            <!--"Festivities" Due to the active dispersal of citizens, spontaneous mass meetings took place all month.
-            The police had a very difficult month.-->
-            Участники марша прошли по Большой Якиманке,
-            на подходе к Болотной возник конфликт с полицейским оцеплением из-за того, что власти нарушили согласованную схему движения.
-            Толпа прорвала оцепление, в полицейских была брошена бутылка с зажигательной смесью, начались столкновения.
-            Полицейские, вытесняя собравшихся с площади, применили силу, били людей дубинками и ногами, рвали одежду и бесцеремонно швыряли в автозаки.
-            После этого весь май стихийно появлялись митинги и пикиты по всей Москве, большинство из них удалось нейтрализовать.
-            Но этот месяц сильно поизмотал силовиков.
-            <span class="influence">+5<i class="fas fa-star nadot"></i></span>
-            <span class="dissatisfaction">+10%<i class="fas fa-grin nadot"></i></span>
-            <span class="military-strength">-5<i class="fas fa-bomb nadot"></i></span>
-        </div>
-        <div class="text-answer-event" id="text-event-two-four"><!--Such decisions seem strange to the government.-->
-            Люди дошли до Болотной прозвучало множество пламенных речей о свержении Путина.
-            К ночи все разошлись. Но ваша власть ослабла.
-            <span class="influence">-5<i class="fas fa-star nadot"></i></span>
-        </div>
+    <div class="text-answer-event4" id="text-event-one-four">
+      <!--"Festivities" Due to the active dispersal of citizens, spontaneous mass meetings took place all month.
+      The police had a very difficult month.-->
+      Участники марша прошли по Большой Якиманке,
+      на подходе к Болотной возник конфликт с полицейским оцеплением из-за того, что власти нарушили согласованную схему
+      движения.
+      Толпа прорвала оцепление, в полицейских была брошена бутылка с зажигательной смесью, начались столкновения.
+      Полицейские, вытесняя собравшихся с площади, применили силу, били людей дубинками и ногами, рвали одежду и
+      бесцеремонно швыряли в автозаки.
+      После этого весь май стихийно появлялись митинги и пикиты по всей Москве, большинство из них удалось
+      нейтрализовать.
+      Но этот месяц сильно поизмотал силовиков.
+      <span class="influence">+5<i class="fas fa-star nadot"></i></span>
+      <span class="dissatisfaction">+10%<i class="fas fa-grin nadot"></i></span>
+      <span class="military-strength">-5<i class="fas fa-bomb nadot"></i></span>
+    </div>
+    <div class="text-answer-event" id="text-event-two-four"><!--Such decisions seem strange to the government.-->
+      Люди дошли до Болотной прозвучало множество пламенных речей о свержении Путина.
+      К ночи все разошлись. Но ваша власть ослабла.
+      <span class="influence">-5<i class="fas fa-star nadot"></i></span>
+    </div>
 
-        <div class="text-answer-event" id="text-event-one-five">
-            <!--Relations with the United States have worsened,
-            but North Korea is grateful that the government really likes it.-->
-            Вы уличшаете отношения с Северной Кореей, но Запад смотрит на вас с недопониманием.
-            <span class="influence">+5<i class="fas fa-star nadot"></i></span>
-        </div>
-        <div class="text-answer-event5" id="text-event-two-five">
-            <!--Korea is offended by sanctions. The West is glad that you are reasonable,
-            but the government does not support the implementation of a sanctions policy against the countries of the socialist bloc.-->
-            КНДР обижается на санкциями. Запад рад, что вы разумны,
-            но правительство не поддерживает реализацию санкционной политики против стран бывшего социалистического блока.
-            <span class="influence">-5<i class="fas fa-star nadot"></i></span>
-            </div>
+    <div class="text-answer-event" id="text-event-one-five">
+      <!--Relations with the United States have worsened,
+      but North Korea is grateful that the government really likes it.-->
+      Вы уличшаете отношения с Северной Кореей, но Запад смотрит на вас с недопониманием.
+      <span class="influence">+5<i class="fas fa-star nadot"></i></span>
+    </div>
+    <div class="text-answer-event5" id="text-event-two-five">
+      <!--Korea is offended by sanctions. The West is glad that you are reasonable,
+      but the government does not support the implementation of a sanctions policy against the countries of the socialist bloc.-->
+      КНДР обижается на санкциями. Запад рад, что вы разумны,
+      но правительство не поддерживает реализацию санкционной политики против стран бывшего социалистического блока.
+      <span class="influence">-5<i class="fas fa-star nadot"></i></span>
+    </div>
 
-        <div class="text-answer-event6" id="text-event-one-six">
-            <!--The government is glad that you think in one way, but the people are unhappy.-->
-            Вступил в силу закон о митингах, увеличивший штрафы за нарушение правил проведения протестных мероприятий:
-            для физ. лиц они составляют 20–300 тыс. рублей, для орг. – до 1 млн рублей.
-            Оппозиционеров, допустивших административное правонарушение при проведении акции или митинга,
-            законодатели лишили возможности заявлять новые массовые мероприятия.
-            <span class="influence">+5<i class="fas fa-star nadot"></i></span>
-            <span class="dissatisfaction">+5%<i class="fas fa-grin nadot"></i></span>
-        </div>
-        <div class="text-answer-event" id="text-event-two-six">
-            <!-- The government relies on new rallies. They think you are too careless about this.-->
-            Правительство опасается возникновению новых митингов.
-            Они думают, вы слишком небрежно к этому относитесь.
-            <span class="influence">-5<i class="fas fa-star nadot"></i></span>
-        </div>
+    <div class="text-answer-event6" id="text-event-one-six">
+      <!--The government is glad that you think in one way, but the people are unhappy.-->
+      Вступил в силу закон о митингах, увеличивший штрафы за нарушение правил проведения протестных мероприятий:
+      для физ. лиц они составляют 20–300 тыс. рублей, для орг. – до 1 млн рублей.
+      Оппозиционеров, допустивших административное правонарушение при проведении акции или митинга,
+      законодатели лишили возможности заявлять новые массовые мероприятия.
+      <span class="influence">+5<i class="fas fa-star nadot"></i></span>
+      <span class="dissatisfaction">+5%<i class="fas fa-grin nadot"></i></span>
+    </div>
+    <div class="text-answer-event" id="text-event-two-six">
+      <!-- The government relies on new rallies. They think you are too careless about this.-->
+      Правительство опасается возникновению новых митингов.
+      Они думают, вы слишком небрежно к этому относитесь.
+      <span class="influence">-5<i class="fas fa-star nadot"></i></span>
+    </div>
 
-        <div class="text-answer-event7" id="text-event-one-seven">
-            <!--The people demand justice now! But people in the government feel their impunity.-->
-            Люди требуют справедливости сейчас! Но люди в правительстве чувствуют свою безнаказанность.
-            <span class="dissatisfaction">+5%<i class="fas fa-grin nadot"></i></span>
-            <span class="influence">+5<i class="fas fa-star nadot"></i></span>
-        </div>
-        <div class="text-answer-event7" id="text-event-two-seven">
-            <!--Landing has occurred. Power has fallen a bit.-->
-            Трагедия всколыхнула всю Россию, повсеместно были открыты пункты сбора гуманитарной помощи.
-            В Крымск приехало более 2,5 тыс. волонтеров. Следственный комитет возбудил уголовное дело о массовой гибели жителей Крымского района.
-            За халатность, ненадлежащее исполнение должностных обязанностей были арестованы местные чиновники.
-            <span class="influence">-5<i class="fas fa-star nadot"></i></span>
-        </div>
-        <div class="text-answer-event7" id="text-event-three-seven"><!--Power has fallen a bit.
+    <div class="text-answer-event7" id="text-event-one-seven">
+      <!--The people demand justice now! But people in the government feel their impunity.-->
+      Люди требуют справедливости сейчас! Но люди в правительстве чувствуют свою безнаказанность.
+      <span class="dissatisfaction">+5%<i class="fas fa-grin nadot"></i></span>
+      <span class="influence">+5<i class="fas fa-star nadot"></i></span>
+    </div>
+    <div class="text-answer-event7" id="text-event-two-seven">
+      <!--Landing has occurred. Power has fallen a bit.-->
+      Трагедия всколыхнула всю Россию, повсеместно были открыты пункты сбора гуманитарной помощи.
+      В Крымск приехало более 2,5 тыс. волонтеров. Следственный комитет возбудил уголовное дело о массовой гибели
+      жителей Крымского района.
+      За халатность, ненадлежащее исполнение должностных обязанностей были арестованы местные чиновники.
+      <span class="influence">-5<i class="fas fa-star nadot"></i></span>
+    </div>
+    <div class="text-answer-event7" id="text-event-three-seven"><!--Power has fallen a bit.
             But the people calmed down a little when they saw how hydro-technical facilities were being built.-->
-            Трагедия всколыхнула всю Россию, повсеместно были открыты пункты сбора гуманитарной помощи.
-            В Крымск приехало более 2,5 тыс. волонтеров. Следственный комитет возбудил уголовное дело о массовой гибели жителей Крымского района.
-            За халатность, ненадлежащее исполнение должностных обязанностей были арестованы местные чиновники.
-            Люди немного успокоились, увидев, как строятся гидротехнические сооружения.
-            <span class="dissatisfaction">-5%<i class="fas fa-grin nadot"></i></span>
-            <span class="influence">-5<i class="fas fa-star nadot"></i></span>
-            <span class="money">-200<i class="fas fa-coins nadot"></i></span>
-        </div>
-
-        <div class="text-answer-event7" id="text-event-one-eight">
-            <!--The drilling platform "Golden eagle" was erected.-->
-            Началась разработка морской буровой установки «Беркут». Она является частью международного проекта «Сахалин-1»,
-            направленного на добычу углеводородов с морских глубин, а также и с побережья. Предполагется,
-            что жизненный цикл проекта продлится до 2040-2050 годов.
-            <span class="money">-300<i class="fas fa-coins nadot"></i></span>
-        </div>
-        <div class="text-answer-event7" id="text-event-two-eight">
-            <!--Specialists began to develop the design of the IL-76MD-90A aircraft.
-            The plane will not only improve the composition of our army, but we will also be able to sell it abroad.-->
-            Началась глубокая модернизация тяжёлого военно-транспортного самолёта Ил-76.
-            Новая версия самолета Ил-76МД-90А усилит нашу армию, позволит расширить рынок военной техники РФ.
-            <span class="money">-300<i class="fas fa-coins nadot"></i></span>
-        </div>
-        <div class="text-answer-event7" id="text-event-three-eight">
-            <!--The construction of the Vostochny spaceport began.-->
-            Началось строительство Космодром «Восточный» — российский космодром на Дальнем Востоке в Амурской области.
-            Космодром возводился с целью обеспечения независимого доступа в космос,
-            гарантированного выполнения международных и коммерческих космических программ, сокращения затрат на космодром Байконур.
-        <span class="money">-300<i class="fas fa-coins nadot"></i></span>
+      Трагедия всколыхнула всю Россию, повсеместно были открыты пункты сбора гуманитарной помощи.
+      В Крымск приехало более 2,5 тыс. волонтеров. Следственный комитет возбудил уголовное дело о массовой гибели
+      жителей Крымского района.
+      За халатность, ненадлежащее исполнение должностных обязанностей были арестованы местные чиновники.
+      Люди немного успокоились, увидев, как строятся гидротехнические сооружения.
+      <span class="dissatisfaction">-5%<i class="fas fa-grin nadot"></i></span>
+      <span class="influence">-5<i class="fas fa-star nadot"></i></span>
+      <span class="money">-200<i class="fas fa-coins nadot"></i></span>
     </div>
 
-        <div class="text-answer-event" id="text-event-four-eight">
-            <!--Stability. Keep it up!-->
-            Стабильность признак мастерства.
-        </div>
-
-        <div class="text-answer-event2" id="text-event-one-nine">
-            <!--Such grandiose plans increase your power. But grandeur requires specific meteodes and approaches.-->
-            Саммит АТЭС во Владивостоке на острове Русский. Российские власти рассчитывают,
-            что эта встреча на высоком уровне лидеров Китая, России, США и Японии поможет
-            сместить внешнеторговый баланс России в сторону азиатских стран.
-            <span class="money">-100<i class="fas fa-coins nadot"></i></span>
-            <span class="corruption">+5%<i class="fas fa-mask nadot"></i></span>
-            <span class="influence">+5<i class="fas fa-star nadot"></i></span>
-        </div>
-        <div class="text-answer-event" id="text-event-two-nine">
-            <!--Your power is falling.-->
-            Ваша власть падает.
-            <span class="influence">-5<i class="fas fa-star nadot"></i></span>
-        </div>
-
-        <div class="cont-event" onclick="continueEventClick()" id="continue-1">
-            Сontinue
-        </div>
+    <div class="text-answer-event7" id="text-event-one-eight">
+      <!--The drilling platform "Golden eagle" was erected.-->
+      Началась разработка морской буровой установки «Беркут». Она является частью международного проекта «Сахалин-1»,
+      направленного на добычу углеводородов с морских глубин, а также и с побережья. Предполагется,
+      что жизненный цикл проекта продлится до 2040-2050 годов.
+      <span class="money">-300<i class="fas fa-coins nadot"></i></span>
+    </div>
+    <div class="text-answer-event7" id="text-event-two-eight">
+      <!--Specialists began to develop the design of the IL-76MD-90A aircraft.
+      The plane will not only improve the composition of our army, but we will also be able to sell it abroad.-->
+      Началась глубокая модернизация тяжёлого военно-транспортного самолёта Ил-76.
+      Новая версия самолета Ил-76МД-90А усилит нашу армию, позволит расширить рынок военной техники РФ.
+      <span class="money">-300<i class="fas fa-coins nadot"></i></span>
+    </div>
+    <div class="text-answer-event7" id="text-event-three-eight">
+      <!--The construction of the Vostochny spaceport began.-->
+      Началось строительство Космодром «Восточный» — российский космодром на Дальнем Востоке в Амурской области.
+      Космодром возводился с целью обеспечения независимого доступа в космос,
+      гарантированного выполнения международных и коммерческих космических программ, сокращения затрат на космодром
+      Байконур.
+      <span class="money">-300<i class="fas fa-coins nadot"></i></span>
     </div>
 
-    <div class="close-advisers">
-        <div class="button-advisers" onclick="buttonAdvisersClick()">
-            <div>A</div>
-            <div>D</div>
-            <div>V</div>
-            <div>I</div>
-            <div>S</div>
-            <div>E</div>
-            <div>R</div>
-            <div>S</div>
-        </div>
-        <div class="places-for-advisers" id="places-advisers1">
-            <h1 class="name-advisers">Meдведев <i class="fas fa-exclamation-triangle button-advisers-cancel"
-                                                  onclick="medvedevCancelClick()" id="button-go-prison1"></i></h1>
-<div class="foto-advisers-medvedev" onclick="medvedevInfoClick()" id="medvedev-foto">
-    <div class="search-evidence" id="search-evidence1">9-х<i class="fas fa-eye eye-turn-prison"></i></div>
-</div>
-            <div class="go-prison" id="medvedev-prison">
-                <span class="collect-incriminating-evidence">Collect incriminating evidence!</span>
-                <span class="collect-incriminating-evidence-cost">
+    <div class="text-answer-event" id="text-event-four-eight">
+      <!--Stability. Keep it up!-->
+      Стабильность признак мастерства.
+    </div>
+
+    <div class="text-answer-event2" id="text-event-one-nine">
+      <!--Such grandiose plans increase your power. But grandeur requires specific meteodes and approaches.-->
+      Саммит АТЭС во Владивостоке на острове Русский. Российские власти рассчитывают,
+      что эта встреча на высоком уровне лидеров Китая, России, США и Японии поможет
+      сместить внешнеторговый баланс России в сторону азиатских стран.
+      <span class="money">-100<i class="fas fa-coins nadot"></i></span>
+      <span class="corruption">+5%<i class="fas fa-mask nadot"></i></span>
+      <span class="influence">+5<i class="fas fa-star nadot"></i></span>
+    </div>
+    <div class="text-answer-event" id="text-event-two-nine">
+      <!--Your power is falling.-->
+      Ваша власть падает.
+      <span class="influence">-5<i class="fas fa-star nadot"></i></span>
+    </div>
+
+    <div class="cont-event" onclick="continueEventClick()" id="continue-1">
+      Сontinue
+    </div>
+  </div>
+
+  <div class="close-advisers">
+    <div class="button-advisers" onclick="buttonAdvisersClick()">
+      <div>A</div>
+      <div>D</div>
+      <div>V</div>
+      <div>I</div>
+      <div>S</div>
+      <div>E</div>
+      <div>R</div>
+      <div>S</div>
+    </div>
+    <div class="places-for-advisers" id="places-advisers1">
+      <h1 class="name-advisers">
+        Meдведев
+        <i class="fas fa-exclamation-triangle button-advisers-cancel"
+           onclick="medvedevCancelClick()"
+           id="button-go-prison1"></i>
+      </h1>
+      <div class="foto-advisers-medvedev" onclick="medvedevInfoClick()" id="medvedev-foto">
+        <div class="search-evidence" id="search-evidence1">9-х<i class="fas fa-eye eye-turn-prison"></i></div>
+      </div>
+      <div class="go-prison" id="medvedev-prison">
+        <span class="collect-incriminating-evidence">Collect incriminating evidence!</span>
+        <span class="collect-incriminating-evidence-cost">
                     -5<i class="fas fa-bomb military-strength"></i>
-                    -5<i class="fas fa-star influence"></i></span>
-                <div class="bottoms-prison">
-                    <div class="bottoms-prison-yes" onclick="medvedevButtonPrisonYesClick()">
-                        Yes
-                    </div>
-                    <div class="bottoms-prison-no" onclick="medvedevButtonPrisonClick()">
-                        No
-                    </div>
-                </div>
-            </div>
-    <div class="describe-advisers">
-    <p><span class="influence">+2 <i class="fas fa-star"></i></span></p>
-    <p><span class="corruption">+15% <i class="fas fa-mask"></i></span></p>
-        <p><span class = "level1">2 level <i class="far fa-window-minimize"></i> 5%</span></p>
-</div>
+                    -5<i class="fas fa-star influence"></i>
+        </span>
+        <div class="bottoms-prison">
+          <div class="bottoms-prison-yes" onclick="medvedevButtonPrisonYesClick()">
+            Yes
+          </div>
+          <div class="bottoms-prison-no" onclick="medvedevButtonPrisonClick()">
+            No
+          </div>
+        </div>
+      </div>
+      <div class="describe-advisers">
+        <p><span class="influence">+2 <i class="fas fa-star"></i></span></p>
+        <p><span class="corruption">+15% <i class="fas fa-mask"></i></span></p>
+        <p><span class="level1">2 level <i class="far fa-window-minimize"></i> 5%</span></p>
+      </div>
     </div>
 
-        <div class="places-for-advisers" id="places-advisers2">
-            <h1 class="name-advisers">Сердюков <i class="fas fa-exclamation-triangle button-advisers-cancel"
-                                                  onclick="serdukovCancelClick()" id="button-go-prison2"></i></h1>
-            <div class="foto-advisers-serdukov" onclick="serdukovInfoClick()" id="serdukov-foto">
-                <div class="search-evidence" id="search-evidence2">
-                    <div class="turn-prison" id="sedykov-prison">3</div>-x<i class="fas fa-eye eye-turn-prison"></i></div>
-            </div>
-            <div class="go-prison" id="serdukov-prison">
-                <span class="collect-incriminating-evidence">Collect incriminating evidence!</span>
-                <span class="collect-incriminating-evidence-cost">
+    <div class="places-for-advisers" id="places-advisers2">
+      <h1 class="name-advisers">
+        Сердюков
+        <i class="fas fa-exclamation-triangle button-advisers-cancel"
+           onclick="serdukovCancelClick()"
+           id="button-go-prison2"></i>
+      </h1>
+      <div class="foto-advisers-serdukov" onclick="serdukovInfoClick()" id="serdukov-foto">
+        <div class="search-evidence" id="search-evidence2">
+          <div class="turn-prison" id="sedykov-prison">3</div>
+          -x<i class="fas fa-eye eye-turn-prison"></i>
+        </div>
+      </div>
+      <div class="go-prison" id="serdukov-prison">
+        <span class="collect-incriminating-evidence">Collect incriminating evidence!</span>
+        <span class="collect-incriminating-evidence-cost">
                     -1<i class="fas fa-bomb military-strength"></i>
-                    -1<i class="fas fa-star influence"></i></span>
-                <div class="bottoms-prison">
-                    <div class="bottoms-prison-yes" onclick="serdukovButtonPrisonYesClick()">
-                        Yes
-                    </div>
-                    <div class="bottoms-prison-no" onclick="serdukovButtonPrisonClick()">
-                        No
-                    </div>
-                </div>
-
-            </div>
-            <div class="describe-advisers" id="serdykov-norm">
-                <p><span class="military-strength">+2 <i class="fas fa-bomb"></i></span></p>
-                <p><span class="corruption">+15% <i class="fas fa-mask"></i></span></p>
-                <p><span class = "level2">2 level <i class="far fa-window-minimize"></i> 60%</span></p>
-            </div>
-
-            <div class="describe-advisers-volmodym" id="serdykov-volmodym">
-                <p><span>-2 <i class="fas fa-star"></i></span></p>
-                <p><span>+15% <i class="fas fa-mask"></i></span></p>
-                <p><span class = "level2">2 lvl <i class="far fa-window-minimize"></i> Независ</span></p>
-            </div>
+                    -1<i class="fas fa-star influence"></i>
+        </span>
+        <div class="bottoms-prison">
+          <div class="bottoms-prison-yes" onclick="serdukovButtonPrisonYesClick()">
+            Yes
+          </div>
+          <div class="bottoms-prison-no" onclick="serdukovButtonPrisonClick()">
+            No
+          </div>
         </div>
 
-        <div class="places-for-advisers" id="places-advisers3">
-            <h1 class="name-advisers">Греф<i class="fas fa-exclamation-triangle button-advisers-cancel"
-                                             onclick="glefCancelClick()" id="button-go-prison3"></i></h1>
-            <div class="foto-advisers-gref" onclick="glefInfoClick()" id="glef-foto">
-                <div class="search-evidence" id="search-evidence3">9-x<i class="fas fa-eye eye-turn-prison"></i></div>
-            </div>
-            <div class="go-prison" id="glef-prison">
-                <span class="collect-incriminating-evidence">Collect incriminating evidence!</span>
-                <span class="collect-incriminating-evidence-cost">
+      </div>
+      <div class="describe-advisers" id="serdykov-norm">
+        <p><span class="military-strength">+2 <i class="fas fa-bomb"></i></span></p>
+        <p><span class="corruption">+15% <i class="fas fa-mask"></i></span></p>
+        <p><span class="level2">2 level <i class="far fa-window-minimize"></i> 60%</span></p>
+      </div>
+
+      <div class="describe-advisers-volmodym" id="serdykov-volmodym">
+        <p><span>-2 <i class="fas fa-star"></i></span></p>
+        <p><span>+15% <i class="fas fa-mask"></i></span></p>
+        <p><span class="level2">2 lvl <i class="far fa-window-minimize"></i> Независ</span></p>
+      </div>
+    </div>
+
+    <div class="places-for-advisers" id="places-advisers3">
+      <h1 class="name-advisers">Греф<i class="fas fa-exclamation-triangle button-advisers-cancel"
+                                       onclick="glefCancelClick()" id="button-go-prison3"></i></h1>
+      <div class="foto-advisers-gref" onclick="glefInfoClick()" id="glef-foto">
+        <div class="search-evidence" id="search-evidence3">9-x<i class="fas fa-eye eye-turn-prison"></i></div>
+      </div>
+      <div class="go-prison" id="glef-prison">
+        <span class="collect-incriminating-evidence">Collect incriminating evidence!</span>
+        <span class="collect-incriminating-evidence-cost">
                     -5<i class="fas fa-bomb military-strength"></i>
                     -5<i class="fas fa-star influence"></i></span>
-                <div class="bottoms-prison">
-                    <div class="bottoms-prison-yes" onclick="glefButtonPrisonYesClick()">
-                        Yes
-                    </div>
-                    <div class="bottoms-prison-no" onclick="glefButtonPrisonClick()">
-                        No
-                    </div>
-                </div>
-
-            </div>
-            <div class="describe-advisers">
-                <p><span class="income">+40 <i class="fas fa-hand-holding-usd"></i></span></p>
-                <p><span class="corruption">+15% <i class="fas fa-mask"></i></span></p>
-                <p><span class = "level1">1 level <i class="far fa-window-minimize"></i> 5%</span></p>
-            </div>
+        <div class="bottoms-prison">
+          <div class="bottoms-prison-yes" onclick="glefButtonPrisonYesClick()">
+            Yes
+          </div>
+          <div class="bottoms-prison-no" onclick="glefButtonPrisonClick()">
+            No
+          </div>
         </div>
 
-        <div class="places-for-advisers" id="places-advisers4">
-            <h1 class="name-advisers">Мантуров<i class="fas fa-exclamation-triangle button-advisers-cancel"
-                                                 onclick="mantyrovCancelClick()" id="button-go-prison4"></i></h1>
-            <div class="foto-advisers-mantyrov" onclick="mantyrovInfoClick()" id="mantyrov-foto">
-                <div class="search-evidence" id="search-evidence4">9-x<i class="fas fa-eye eye-turn-prison" ></i></div>
-            </div>
+      </div>
+      <div class="describe-advisers">
+        <p><span class="income">+40 <i class="fas fa-hand-holding-usd"></i></span></p>
+        <p><span class="corruption">+15% <i class="fas fa-mask"></i></span></p>
+        <p><span class="level1">1 level <i class="far fa-window-minimize"></i> 5%</span></p>
+      </div>
+    </div>
 
-            <div class="go-prison" id="mantyrov-prison">
-                <span class="collect-incriminating-evidence">Collect incriminating evidence!</span>
-                <span class="collect-incriminating-evidence-cost">
+    <div class="places-for-advisers" id="places-advisers4">
+      <h1 class="name-advisers">Мантуров<i class="fas fa-exclamation-triangle button-advisers-cancel"
+                                           onclick="mantyrovCancelClick()" id="button-go-prison4"></i></h1>
+      <div class="foto-advisers-mantyrov" onclick="mantyrovInfoClick()" id="mantyrov-foto">
+        <div class="search-evidence" id="search-evidence4">9-x<i class="fas fa-eye eye-turn-prison"></i></div>
+      </div>
+
+      <div class="go-prison" id="mantyrov-prison">
+        <span class="collect-incriminating-evidence">Collect incriminating evidence!</span>
+        <span class="collect-incriminating-evidence-cost">
                     -5<i class="fas fa-bomb military-strength"></i>
                     -5<i class="fas fa-star influence"></i></span>
-                <div class="bottoms-prison">
-                    <div class="bottoms-prison-yes" onclick="mantyrovButtonPrisonYesClick()">
-                        Yes
-                    </div>
-                    <div class="bottoms-prison-no" onclick="mantyrovButtonPrisonClick()">
-                        No
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="describe-advisers">
-                <p><span class="income">+20 <i class="fas fa-hand-holding-usd"></i></span></p>
-                <p><span class="corruption">+5% <i class="fas fa-mask"></i></span></p>
-                <p><span class = "level1">1 level <i class="far fa-window-minimize"></i> 15%</span></p>
-            </div>
+        <div class="bottoms-prison">
+          <div class="bottoms-prison-yes" onclick="mantyrovButtonPrisonYesClick()">
+            Yes
+          </div>
+          <div class="bottoms-prison-no" onclick="mantyrovButtonPrisonClick()">
+            No
+          </div>
         </div>
 
-        <div class="places-for-advisers" id="places-advisers5">
-            <h1 class="name-advisers">Колокольцев<i class="fas fa-exclamation-triangle button-advisers-cancel"
-                                                onclick="kolokolcevCancelClick()" id="button-go-prison5"></i></h1>
-            <div class="foto-advisers-kolokolcev" onclick="kolokolcevInfoClick()" id="kolokolcev-foto">
-                <div class="search-evidence" id="search-evidence5">9-x<i class="fas fa-eye eye-turn-prison" ></i></div>
-            </div>
-            <div class="go-prison" id="kolokolcev-prison">
-                <span class="collect-incriminating-evidence">Collect incriminating evidence!</span>
-                <span class="collect-incriminating-evidence-cost">
+      </div>
+
+      <div class="describe-advisers">
+        <p><span class="income">+20 <i class="fas fa-hand-holding-usd"></i></span></p>
+        <p><span class="corruption">+5% <i class="fas fa-mask"></i></span></p>
+        <p><span class="level1">1 level <i class="far fa-window-minimize"></i> 15%</span></p>
+      </div>
+    </div>
+
+    <div class="places-for-advisers" id="places-advisers5">
+      <h1 class="name-advisers">
+        Колокольцев
+        <i class="fas fa-exclamation-triangle button-advisers-cancel"
+           onclick="kolokolcevCancelClick()"
+           id="button-go-prison5"></i>
+      </h1>
+      <div class="foto-advisers-kolokolcev" onclick="kolokolcevInfoClick()" id="kolokolcev-foto">
+        <div class="search-evidence" id="search-evidence5">9-x<i class="fas fa-eye eye-turn-prison"></i></div>
+      </div>
+      <div class="go-prison" id="kolokolcev-prison">
+        <span class="collect-incriminating-evidence">Collect incriminating evidence!</span>
+        <span class="collect-incriminating-evidence-cost">
                     -5<i class="fas fa-bomb military-strength"></i>
                     -5<i class="fas fa-star influence"></i></span>
-                <div class="bottoms-prison">
-                    <div class="bottoms-prison-yes" onclick="kolokolcevButtonPrisonYesClick()">
-                        Yes
-                    </div>
-                    <div class="bottoms-prison-no" onclick="kolokolcevButtonPrisonClick()">
-                        No
-                    </div>
-                </div>
-
-            </div>
-            <div class="describe-advisers">
-                <p><span class="military-strength">+2 <i class="fas fa-bomb"></i></span></p>
-                <p><span class="corruption">+10% <i class="fas fa-mask"></i></span></p>
-                <p><span class = "level1">1 level <i class="far fa-window-minimize"></i> 15%</span></p>
-            </div>
+        <div class="bottoms-prison">
+          <div class="bottoms-prison-yes" onclick="kolokolcevButtonPrisonYesClick()">
+            Yes
+          </div>
+          <div class="bottoms-prison-no" onclick="kolokolcevButtonPrisonClick()">
+            No
+          </div>
         </div>
 
+      </div>
+      <div class="describe-advisers">
+        <p><span class="military-strength">+2 <i class="fas fa-bomb"></i></span></p>
+        <p><span class="corruption">+10% <i class="fas fa-mask"></i></span></p>
+        <p><span class="level1">1 level <i class="far fa-window-minimize"></i> 15%</span></p>
+      </div>
     </div>
 
-    <div style="color:red" id="perehod"></div>
+  </div>
+
+  <div style="color:red" id="perehod"></div>
 
 
-    <div class="turn1">
-        Turn Over
+  <div class="turn1">
+    Turn Over
+  </div>
+
+  <div class="turn" onclick="turnOverClick()" id="turn">
+    Turn Over
+  </div>
+
+
+  <div class="actions-icons " id="actions-icons-java1">
+    <div class="text-fon-actions" onclick="TakeBebtClick()">
+      Взять вдолг у других государтв<span class="money"> +200</span><i class="fas fa-coins money nadot"></i>
+      <span class="influence"> -15</span><i class="fas fas fa-star influence nadot"></i>
+
+      <!--            <div class="cancel-debt-to-2x" id="cancel-to-2x">-->
+      <!--                <span id="debt-2x">3</span> ход(а) недоступно.-->
+      <!--            </div>-->
+    </div>
+  </div>
+
+
+  <div class="actions-icons" id="actions-icons-java2">
+    <div class="text-fon-actions" onclick="RaiseTaxClick()">
+      Поднять налоги<span class="income"> +15</span><i class="fas fa-hand-holding-usd income nadot"></i>
+      <span class="dissatisfaction"> +10%</span><i class="fas fa-grin dissatisfaction nadot"></i>
+    </div>
+  </div>
+
+  <div class="actions-icons" id="actions-icons-java3">
+    <div class="text-fon-actions" onclick="LetStealClick()">
+      Позволить воровать больше
+      <span class="influence"> +5</span><i class="fas fa-star influence nadot"></i>
+      <span class="corruption"> +10</span><i class="fas fa-mask corruption nadot"></i>
     </div>
 
-    <div class="turn" onclick="turnOverClick()" id="turn">
-        Turn Over
+    <div class="text-fon-actions" onclick="ShowStrengthClick()">
+      Продемонстрировать силу
+      <span class="influence"> +10</span><i class="fas fa-star influence nadot"></i>
+      <span class="military-strength"> -10</span><i class="fas fa-bomb military-strength nadot"></i>
     </div>
 
+  </div>
+
+  <div class="actions-icons" id="actions-icons-java4">
+    <div class="text-fon-actions" onclick="IncreasedPropagandaClick()">
+      Усиление патриатической прапоганды<span class="military-strength"> +5</span><i
+      class="fas fa-bomb military-strength nadot"></i>
+      <span class="money"> -100</span><i class="fas fa-coins money nadot"></i>
+    </div>
+  </div>
+
+  <div class="actions-icons" id="actions-icons-java5">
+    <div class="text-fon-actions" onclick="RelaxInCountryClick()">
+      Отдохнуть на даче<span class="health"> +10%</span><i class="fas fa-heart health nadot"></i>
+    </div>
+  </div>
+
+  <div class="actions-icons" id="actions-icons-java6">
+    <div class="text-fon-actions" onclick="ToLandClick()">
+      Провести посадки внесистемных коррупционеров
+      <span class="corruption"> -10%</span><i class="fas fa-mask corruption nadot"></i>
+      <span class="influence"> -5</span><i class="fas fas fa-star influence nadot"></i>
+      <span class="military-strength"> -5</span><i class="fas fa-bomb military-strength nadot"></i>
+    </div>
+  </div>
+
+  <div class="actions-icons" id="actions-icons-java7">
+    <div class="text-fon-actions" onclick="RepressionClick()">
+      Репрессировать население<span class="dissatisfaction"> -10%</span><i
+      class="fas fas fa-grin dissatisfaction nadot"></i>
+      <span class="military-strength"> -5</span><i class="fas fa-bomb military-strength nadot"></i>
+    </div>
+    <div class="text-fon-actions" onclick="LawClick()">
+      Подготовить либеральный закон
+      <span class="dissatisfaction"> -5%</span><i class="fas fa-grin dissatisfaction nadot"></i>
+      <span class="influence"> -5</span><i class="fas fa-star influence nadot"></i>
+    </div>
+    <div class="text-fon-actions" onclick="MeetingClick()">
+      Встреча с народом
+      <span class="dissatisfaction"> -10%</span><i class="fas fas fa-grin dissatisfaction nadot"></i>
+      <span class="health"> -50%</span><i class="fas fa-heart health nadot"></i>
+    </div>
+  </div>
+
+  <div class="cancelAction" id="cancel-action">
+    Action points are over.
+  </div>
 
 
-    <div class="actions-icons " id="actions-icons-java1">
-        <div class="text-fon-actions" onclick="TakeBebtClick()">
-          Взять вдолг у других государтв<span class="money"> +200</span><i class="fas fa-coins money nadot"></i>
-            <span class="influence"> -15</span><i class="fas fas fa-star influence nadot"></i>
+  <div class="have-actions">
+    <div class="one-action" id="one-action">1</div>
+    /1
+  </div>
 
-<!--            <div class="cancel-debt-to-2x" id="cancel-to-2x">-->
-<!--                <span id="debt-2x">3</span> ход(а) недоступно.-->
-<!--            </div>-->
-        </div>
+  <div class="factory" id="factory">
+    <div class="Berkyt" id="berkyt">
+      <div class="turn-factory">
+        <div id="turn-factory-berkyt">12</div>
+        -x
+      </div>
     </div>
 
-
-    <div class="actions-icons" id="actions-icons-java2">
-        <div class="text-fon-actions" onclick="RaiseTaxClick()">
-            Поднять налоги<span class="income"> +15</span><i class="fas fa-hand-holding-usd income nadot"></i>
-            <span class="dissatisfaction"> +10%</span><i class="fas fa-grin dissatisfaction nadot"></i>
-        </div>
+    <div class="Space" id="space">
+      <div class="turn-factory">
+        <div id="turn-factory-space">12</div>
+        -x
+      </div>
     </div>
 
-    <div class="actions-icons" id="actions-icons-java3">
-        <div class="text-fon-actions" onclick="LetStealClick()">
-            Позволить воровать больше
-            <span class="influence"> +5</span><i class="fas fa-star influence nadot"></i>
-            <span class="corruption"> +10</span><i class="fas fa-mask corruption nadot"></i>
-        </div>
-
-        <div class="text-fon-actions" onclick="ShowStrengthClick()">
-            Продемонстрировать силу
-            <span class="influence"> +10</span><i class="fas fa-star influence nadot"></i>
-            <span class="military-strength"> -10</span><i class="fas fa-bomb military-strength nadot"></i>
-        </div>
-
+    <div class="IL-76md-90A" id="IL-76md-90A">
+      <div class="turn-factory">
+        <div id="turn-factory-IL-76md-90A">12</div>
+        -x
+      </div>
     </div>
+  </div>
 
-    <div class="actions-icons" id="actions-icons-java4">
-        <div class="text-fon-actions" onclick="IncreasedPropagandaClick()">
-            Усиление патриатической прапоганды<span class="military-strength"> +5</span><i class="fas fa-bomb military-strength nadot"></i>
-            <span class="money"> -100</span><i class="fas fa-coins money nadot"></i>
-        </div>
-    </div>
-
-    <div class="actions-icons" id="actions-icons-java5">
-        <div class="text-fon-actions" onclick="RelaxInCountryClick()">
-            Отдохнуть на даче<span class="health"> +10%</span><i class="fas fa-heart health nadot"></i>
-        </div>
-    </div>
-
-    <div class="actions-icons" id="actions-icons-java6">
-        <div class="text-fon-actions" onclick="ToLandClick()">
-            Провести посадки внесистемных коррупционеров
-            <span class="corruption"> -10%</span><i class="fas fa-mask corruption nadot"></i>
-            <span class="influence"> -5</span><i class="fas fas fa-star influence nadot"></i>
-            <span class="military-strength"> -5</span><i class="fas fa-bomb military-strength nadot"></i>
-        </div>
-    </div>
-
-    <div class="actions-icons" id="actions-icons-java7">
-        <div class="text-fon-actions" onclick="RepressionClick()">
-            Репрессировать население<span class="dissatisfaction"> -10%</span><i class="fas fas fa-grin dissatisfaction nadot"></i>
-            <span class="military-strength"> -5</span><i class="fas fa-bomb military-strength nadot"></i>
-        </div>
-        <div class="text-fon-actions" onclick="LawClick()">
-            Подготовить либеральный закон
-            <span class="dissatisfaction"> -5%</span><i class="fas fa-grin dissatisfaction nadot"></i>
-            <span class="influence"> -5</span><i class="fas fa-star influence nadot"></i>
-        </div>
-        <div class="text-fon-actions" onclick="MeetingClick()">
-            Встреча с народом
-            <span class="dissatisfaction"> -10%</span><i class="fas fas fa-grin dissatisfaction nadot"></i>
-            <span class="health"> -50%</span><i class="fas fa-heart health nadot"></i>
-        </div>
-    </div>
-
-    <div class="cancelAction" id="cancel-action">
-        Action points are over.
-    </div>
-
-
-    <div class="have-actions">
-        <div class="one-action" id="one-action">1</div>/1
-    </div>
-
-    <div class="factory" id="factory">
-        <div class="Berkyt" id="berkyt">
-            <div class="turn-factory"><div id="turn-factory-berkyt">12</div>-x
-            </div>
-        </div>
-
-        <div class="Space" id="space">
-            <div class="turn-factory"><div id="turn-factory-space">12</div>-x
-            </div>
-        </div>
-
-        <div class="IL-76md-90A" id="IL-76md-90A">
-            <div class="turn-factory"><div id="turn-factory-IL-76md-90A">12</div>-x
-            </div>
-        </div>
-    </div>
-
-    </div>
+</div>
 
 <div class="game-over-cont" id="game-over-cont">
-   <div class="text-game-over">Game Over
+  <div class="text-game-over">Game Over
     <div class="game-over-cont1" onclick="gameOverContClick()">Сontinue</div>
-   </div>
+  </div>
 </div>
 
 <div class="game-over" id="game-over-dissatisfaction">
-    <div class="game-over-dissatisfaction-text">Народ впал в бешенство из-за вашего безрассудного правления!
+  <div class="game-over-dissatisfaction-text">Народ впал в бешенство из-за вашего безрассудного правления!
     Началась гражданскя война. Вы прятались за стенами Кремля, пока верные вам солдаты,
     что не сбежали в отличии от подавляющего большинства, обороняли Москву от сепаратистов.
     Москва оказалась отрезана от всех остальных городов, повтавки продовольствия и орожия таяли на глазах.
@@ -902,58 +959,58 @@
     пустили газ в город, а за день до этого уже собрали новое демократическое правительство в Санкт-Петербурге.
     Последнии несколько часов до момента ИКС вы сидели в промерзшем и сыром кремлевском бункере, сжимая ампулу
     с ядом в дрожащей руке.
-        </div>
-    <div class="drink-poison" onclick="drinkPoisonClick()">Выпить яд</div>
-    <div class="pray" onclick="prayClick()">Помолиться</div>
-    </div>
+  </div>
+  <div class="drink-poison" onclick="drinkPoisonClick()">Выпить яд</div>
+  <div class="pray" onclick="prayClick()">Помолиться</div>
+</div>
 
 <div class="game-over" id="game-over-money">
-    <div class="game-over-dissatisfaction-text">В стране закончились деньги. Настала тотальная бедность.
-        Народ впал в бешенство из-за вашего безрассудного правления!
-        Началась гражданскя война. Вы прятались за стенами Кремля, пока верные вам солдаты,
-        что не сбежали в отличии от подавляющего большинства, обороняли Москву от сепаратистов.
-        Москва оказалась отрезана от всех остальных городов, повтавки продовольствия и орожия таяли на глазах.
-        Через 23 дней после начала войны, повстанческие войстка вошли в Москву. Вы лично приезжали на 1-линию
-        обороны, зачитывали президентские указы. Но еще через несколько дней пожар охватил Москву, сепаратисты
-        пустили газ в город, а за день до этого уже собрали новое демократическое правительство в Санкт-Петербурге.
-        Последнии несколько часов до момента ИКС вы сидели в промерзшем и сыром кремлевском бункере, сжимая ампулу
-        с ядом в дрожащей руке.
-    </div>
-    <div class="drink-poison" onclick="drinkPoisonClick()">Выпить яд</div>
-    <div class="pray" onclick="prayClick()">Помолиться</div>
+  <div class="game-over-dissatisfaction-text">В стране закончились деньги. Настала тотальная бедность.
+    Народ впал в бешенство из-за вашего безрассудного правления!
+    Началась гражданскя война. Вы прятались за стенами Кремля, пока верные вам солдаты,
+    что не сбежали в отличии от подавляющего большинства, обороняли Москву от сепаратистов.
+    Москва оказалась отрезана от всех остальных городов, повтавки продовольствия и орожия таяли на глазах.
+    Через 23 дней после начала войны, повстанческие войстка вошли в Москву. Вы лично приезжали на 1-линию
+    обороны, зачитывали президентские указы. Но еще через несколько дней пожар охватил Москву, сепаратисты
+    пустили газ в город, а за день до этого уже собрали новое демократическое правительство в Санкт-Петербурге.
+    Последнии несколько часов до момента ИКС вы сидели в промерзшем и сыром кремлевском бункере, сжимая ампулу
+    с ядом в дрожащей руке.
+  </div>
+  <div class="drink-poison" onclick="drinkPoisonClick()">Выпить яд</div>
+  <div class="pray" onclick="prayClick()">Помолиться</div>
 </div>
 
 <div class="game-over" id="game-over-statys">
-    <div class="game-over-dissatisfaction-text">Ваша власть ослабла настолько, что никто из министров вас не поддерживает.
-        Вас пытались убрать с поста объявив перевыборы. Вы пытались сопротивляться, сажали каждого несогласного.
-        Народ впал в бешенство из-за вашего безрассудного правления!
-        Началась гражданскя война. Вы прятались за стенами Кремля, пока верные вам солдаты,
-        что не сбежали в отличии от подавляющего большинства, обороняли Москву от сепаратистов.
-        Москва оказалась отрезана от всех остальных городов, повтавки продовольствия и орожия таяли на глазах.
-        Через 23 дней после начала войны, повстанческие войстка вошли в Москву. Вы лично приезжали на 1-линию
-        обороны, зачитывали президентские указы. Но еще через несколько дней пожар охватил Москву, сепаратисты
-        пустили газ в город, а за день до этого уже собрали новое демократическое правительство в Санкт-Петербурге.
-        Последнии несколько часов до момента ИКС вы сидели в промерзшем и сыром кремлевском бункере, сжимая ампулу
-        с ядом в дрожащей руке.
-    </div>
-    <div class="drink-poison" onclick="drinkPoisonClick()">Выпить яд</div>
-    <div class="pray" onclick="prayClick()">Помолиться</div>
+  <div class="game-over-dissatisfaction-text">Ваша власть ослабла настолько, что никто из министров вас не поддерживает.
+    Вас пытались убрать с поста объявив перевыборы. Вы пытались сопротивляться, сажали каждого несогласного.
+    Народ впал в бешенство из-за вашего безрассудного правления!
+    Началась гражданскя война. Вы прятались за стенами Кремля, пока верные вам солдаты,
+    что не сбежали в отличии от подавляющего большинства, обороняли Москву от сепаратистов.
+    Москва оказалась отрезана от всех остальных городов, повтавки продовольствия и орожия таяли на глазах.
+    Через 23 дней после начала войны, повстанческие войстка вошли в Москву. Вы лично приезжали на 1-линию
+    обороны, зачитывали президентские указы. Но еще через несколько дней пожар охватил Москву, сепаратисты
+    пустили газ в город, а за день до этого уже собрали новое демократическое правительство в Санкт-Петербурге.
+    Последнии несколько часов до момента ИКС вы сидели в промерзшем и сыром кремлевском бункере, сжимая ампулу
+    с ядом в дрожащей руке.
+  </div>
+  <div class="drink-poison" onclick="drinkPoisonClick()">Выпить яд</div>
+  <div class="pray" onclick="prayClick()">Помолиться</div>
 </div>
 
 <div class="game-over" id="game-death">
-<div class="game-over-dissatisfaction-text">Это не сильно спасло вас. Через час врываются вооруженные повстанцы в
-        саже и крови. Они вытаскивают вас на улицу. Коротким обвинением командира начинается, проходит
-        и заканчивается трибунальный суд. Вас приговоривают к растрелу.
-    </div>
-    <div class="drink-poison" onclick="prayTwoClick()" id="drink-poison">Молить пощады</div>
-    <div class="pray2" onclick="drinkPoisonTwoClick()" id="pray">Принять смерть</div>
+  <div class="game-over-dissatisfaction-text">Это не сильно спасло вас. Через час врываются вооруженные повстанцы в
+    саже и крови. Они вытаскивают вас на улицу. Коротким обвинением командира начинается, проходит
+    и заканчивается трибунальный суд. Вас приговоривают к растрелу.
+  </div>
+  <div class="drink-poison" onclick="prayTwoClick()" id="drink-poison">Молить пощады</div>
+  <div class="pray2" onclick="drinkPoisonTwoClick()" id="pray">Принять смерть</div>
 </div>
 
 <div class="game-over" id="game-death-finish">
-<div class="game-over-dissatisfaction-text">
+  <div class="game-over-dissatisfaction-text">
     Не помогло. На вас надевают мешок. Выстрел...
-</div>
-    <div class="drink-poison" onclick="GameOverClick()">Game over</div>
+  </div>
+  <div class="drink-poison" onclick="GameOverClick()">Game over</div>
 </div>
 
 
@@ -961,10 +1018,10 @@
 </div>
 
 <div class="win" id="win">
-   <div class="text-win1">Победа!</div>
-    <div class="text-win">Вам удолось еще год продержаться у власти.</div>
-        <div class="text-win">Это был насыщенный 2012 год, но что же вас ждет дальше...</div>
-    <div class="text-win2">Вы Путин на <span id="check-putin"></span>%</div>
+  <div class="text-win1">Победа!</div>
+  <div class="text-win">Вам удолось еще год продержаться у власти.</div>
+  <div class="text-win">Это был насыщенный 2012 год, но что же вас ждет дальше...</div>
+  <div class="text-win2">Вы Путин на <span id="check-putin"></span>%</div>
 </div>
 
 <script src="https://kit.fontawesome.com/22c255c05c.js" crossorigin="anonymous"></script>

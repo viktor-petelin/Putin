@@ -1,3 +1,16 @@
+/*
+  Comments:
+    - icons in menu are not responsive if width < 1050px
+
+
+
+
+
+ */
+
+
+
+
 * {
     box-sizing: border-box;
 }
@@ -213,6 +226,10 @@ body {
     width: 100%;
     justify-content: space-around;
     padding-right: 40px;
+}
+
+.money, .income, .income-black {
+    display: inline;
 }
 
 .money {
