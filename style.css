@@ -228,7 +228,7 @@ body {
     padding-right: 40px;
 }
 
-.money, .income, .income-black {
+.money, .income, .income-black, .influence ,.military-strength, .health, .corruption, .dissatisfaction{
     display: inline;
 }
 
